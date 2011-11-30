@@ -12,6 +12,8 @@ GEM
       activesupport (= 2.3.14)
     activesupport (2.3.14)
     addressable (2.2.6)
+    daemons (1.1.0)
+    eventmachine (0.12.10)
     heroku (2.14.0)
       launchy (>= 0.3.2)
       rest-client (~> 1.6.1)
@@ -34,6 +36,10 @@ GEM
       mime-types (>= 1.16)
     rubyzip (0.9.5)
     term-ansicolor (1.0.7)
+    thin (1.2.11)
+      daemons (>= 1.0.9)
+      eventmachine (>= 0.12.6)
+      rack (>= 1.0.0)
 
 PLATFORMS
   ruby
@@ -42,3 +48,4 @@ DEPENDENCIES
   heroku
   pg
   rails (= 2.3.14)
+  thin
