@@ -1,0 +1,31 @@
+<fieldset width>
+	<legend class="name">Detalhes do Produto <%= @produto.nome %></legend>
+	<p>
+	  <b>Codigo:</b>
+	  <%=h @produto.codigo %>
+	</p>
+
+	<p>
+	  <b>Nome:</b>
+	  <%=h @produto.nome %>
+	</p>
+
+	<p>
+	  <b>Descricao:</b>
+	  <%=h @produto.descricao %>
+	</p>
+
+	<p>
+	  <b>Detalhes:</b>
+	  <%=h @produto.detalhes %>
+	</p>
+</fieldset>
+
+
+<div class="action">
+	<%= link_to 'Edit', "#", :onclick => "addSubTab('tab_produtos',
+													'sub_tab_produtos_edit_" + @produto.id.to_s + "',
+													'Produto "+@produto.nome.to_s+"' ,
+													'/produtos/edit/"+@produto.id.to_s+"' ,
+													'editIcon');closeSubTab('tab_produtos','sub_tab_produtos_show_" + @produto.id.to_s + "');" %> <span class="pipe">|</span>
+<%= link_to 'Close', "#", :onclick => "closeSubTab('tab_produtos','sub_tab_produtos_show_" + @produto.id.to_s + "');" %>

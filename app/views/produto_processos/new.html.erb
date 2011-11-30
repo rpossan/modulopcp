@@ -1,0 +1,213 @@
+<script type="text/javascript">
+	//Produtos Store
+	var store_combo_Produtos =
+	createStore(
+		'/produtos/store/combo',
+		['id', 'nome'], [{name: 'id',  mapping: 'id'}, {name: 'nome',  mapping: 'nome'}]
+	);
+
+	var store_combo_Processos =
+	createStore(
+		'/processos/store/combo',
+		['id', 'nome'], [ {name: 'id', mapping: 'id'}, {name: 'nome', mapping: 'nome'} ]
+	);
+
+	var comboProdutos =
+	new Ext.form.ComboBox({
+		fieldLabel: 'Produto',
+		valueField: 'id',
+		displayField: 'nome',
+		name: 'produto_processo[produto_id]',
+		hiddenName: 'produto_processo[produto_id]',
+		editable: true,
+		emptyText: 'Selecione um Produto...',
+		store: store_combo_Produtos,
+		mode: 'remote',
+		selectOnFocus: true,
+		forceSelection: true,
+		triggerAction: 'all',
+		minChars: 3,
+		allowBlank: false,
+		width: 350
+	});
+
+	var cols = [
+		{header: '<b>Nome</b>', dataIndex: 'nome', sortable: false, menuDisabled: true, width: 230, maxLength: 100},
+		{header: '<b>Tempo Padrao</b>', dataIndex: 'tempo_padrao', sortable: false, menuDisabled: true, width: 120, maxLength: 100},
+		{header: '<b>Produção Hora</b>', dataIndex: 'producao_hora', sortable: false, menuDisabled: true, width: 120, maxLength: 100}
+	];
+
+    var local_processosStore =
+    new Ext.data.Store({ autoload: false, fields: ['id', 'nome', 'tempo_padrao', 'producao_hora'] });
+
+  	var gridProdutoProcessos =
+	new Ext.grid.GridPanel({
+			autoHeight: true,
+			autoWidth: true,
+			border: true,
+			title: null,
+			store: local_processosStore,
+      		loadMask: true,
+      		columns: cols,
+			stripeRows: true,
+	        tbar:[
+	        	{
+		            text: 'Inserir processo',
+	                iconCls: 'addNewIcon',
+		            handler : function(){
+					var processoAdd = new Ext.Window({
+						id: 'user_add',
+						title: 'Definição do Processo',
+						closeAction: 'close',
+                        autoScroll: true,
+						modal: true,
+						resizable: false,
+						height:160,
+						width:655,
+						buttons: [
+							{text: 'OK', autoHeight: true,handler:
+								function(){
+									if(Ext.getCmp('form_add_produto_processos').getForm().isValid()){
+						                var r = new Ext.data.Record(
+						                	{
+						                		id: Ext.getCmp('item_processo_combo').getValue(),
+						                		nome: Ext.getCmp('item_processo_combo').getRawValue(),
+						                		tempo_padrao: Ext.getCmp('item_processo_tempo_padrao').getRawValue(),
+						                		producao_hora: Ext.getCmp('item_processo_producao_hora').getRawValue()
+					                		}
+						                );
+						                local_processosStore.insert(local_processosStore.getCount(), r);
+						                processoAdd.close();
+									}
+								}
+							},
+							{text: 'Cancel', handler: function(){ processoAdd.close(); }}
+						],
+						items:[
+							new Ext.form.FormPanel({
+								id: 'form_add_produto_processos',
+						      	frame:true,
+								title: '',
+								bodyStyle: 'padding:2px 2px 0',
+								style: "margin: 0px auto 0px auto;",
+								autoWidth: true,
+								autoHeight: true,
+								monitorValid: true,
+								labelWidth: 150,
+								items:[
+									new Ext.form.ComboBox({
+										id: 'item_processo_combo',
+										fieldLabel: 'Operação',
+										valueField: 'id',
+										displayField: 'nome',
+										editable: true,
+										emptyText: 'Selecione uma operação...',
+										store: store_combo_Processos,
+										mode: 'remote',
+										selectOnFocus: true,
+										forceSelection: true,
+										triggerAction: 'all',
+										minChars: 3,
+										allowBlank: false,
+										width: 450
+									}),
+									{ xtype:'numberfield', width: 75, fieldLabel: 'Tempo Padrão (minutos)', id: 'item_processo_tempo_padrao', allowBlank: false, maxLength: 30 },
+									{ xtype:'numberfield', width: 75, fieldLabel: 'Produção Hora', id: 'item_processo_producao_hora', allowBlank: false, maxLength: 30 }
+								]
+							})
+						]
+					});
+					processoAdd.show();
+	            }
+	        },
+			'-',
+			{
+		        text: 'Remove',
+		        iconCls: 'deleteIcon',
+				handler: function() {
+					var selectionModel = gridProdutoProcessos.getSelectionModel();
+					var selectedRow = selectionModel.getSelected();
+					if (selectedRow) {
+		                var selIdx = gridProdutoProcessos.store.indexOf(selectedRow);
+						gridProdutoProcessos.getStore().remove(selectedRow);
+						selectionModel.selectRow(selIdx);
+					}
+				}
+		    }
+        ]
+	});
+
+	var form_newProdutoProcessos = new Ext.form.FormPanel({
+      	frame:true,
+		title: 'Crie o Processo de Fabricação conforme formulário abaixo',
+		bodyStyle:'padding:5px 5px 0 5px',
+        style: "margin: 0px auto 0px auto;",
+		width: 520,
+		monitorValid: true,
+		items:[
+				{
+					xtype:"fieldset",
+					autoHeight:true,
+					items:[comboProdutos]
+	  		   	},
+				{
+					xtype:"fieldset",
+					title:"Processos de Fabricação",
+					autoHeight:true,
+					labelWidth: 1,
+					items: [gridProdutoProcessos]
+				}
+  		  ],
+		buttons:[{text: 'Salvar',
+			     handler:function(){
+                 	var processosArr = [];
+	                local_processosStore.each(function(record) {
+	                    record.commit();
+	                    processosArr.push(record.data)
+	                });
+
+					if(processosArr.length > 0){
+						var params_add = {produto_processos: Ext.encode(processosArr)};
+					}else{
+						var params_add = null;
+					}
+
+			        if (form_newProdutoProcessos.getForm().isValid()){
+			             form_newProdutoProcessos.getForm().submit({
+								params: params_add,
+			             		url:'<%= url_for (:controller => 'produto_processos', :action => 'create') %>',
+	        					waitMsg:'Saving Data...',
+	            				success: function(){
+	            					Ext.Msg.alert('OK','Processo de Fabricação criado com sucesso!');
+	              					updateSubTab('tab_produto_processos','sub_tab_produto_processos','Processos de Fabricação','<%= produto_processos_path %>');
+	              					closeSubTab('tab_produto_processos','sub_tab_produto_processos_new');
+              					},
+	            				failure: function(){
+	            					Ext.Msg.alert('Error','There has been a problem while creating this request! Contact the system administrator.')
+            					}
+		          			 });
+					 }
+      			 }
+			     },
+			     {text: 'Cancel',
+				  handler:function(){closeSubTab('tab_teams','sub_tab_teams_new');}
+  			    }]
+	});
+
+	form_newProdutoProcessos.render('area_form_newProdutoProcessos');
+
+</script>
+<br/>
+<div id="area_form_newProdutoProcessos" style="float:left;margin-left:10px;">
+</div>
+<style>
+.x-grid3 {
+    background-color: #FFFFFF;
+    border: 1px solid #D0D0D0;
+}
+.x-fieldset {
+    padding: 0 10px 10px 10px;
+}
+.x-fieldset-bwrap {
+    margin-top: 10px;
+</style>

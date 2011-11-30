@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/optimaster_pon/!svn/ver/212/rfms_web/branches/optimaster2/app/views/login
+END
+list_permissions_json.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/optimaster_pon/!svn/ver/212/rfms_web/branches/optimaster2/app/views/login/list_permissions_json.rhtml
+END
+delete_user.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/optimaster_pon/!svn/ver/212/rfms_web/branches/optimaster2/app/views/login/delete_user.rhtml
+END
+index.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/optimaster_pon/!svn/ver/212/rfms_web/branches/optimaster2/app/views/login/index.rhtml
+END
+login.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/optimaster_pon/!svn/ver/212/rfms_web/branches/optimaster2/app/views/login/login.rhtml
+END
+logout.rhtml
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/optimaster_pon/!svn/ver/212/rfms_web/branches/optimaster2/app/views/login/logout.rhtml
+END

@@ -1,0 +1,116 @@
+<script type="text/javascript">
+
+var addUser = new Ext.FormPanel({
+  frame:true,
+  title: 'Create a new user using the form below',
+  bodyStyle:'padding:0px 0px 0px',
+  style: "margin: 0px auto 0px 0px;",
+  width: 530,
+  defaultType: 'textfield',
+  labelWidth:140,
+  monitorValid: true,
+  items: [	{xtype:"fieldset",
+			 defaultType: 'textfield',
+             autoHeight: true,
+			 items:[
+					{
+					  fieldLabel: 'Name',
+					  name: 'user[name]',
+					  width: 350,
+					  allowBlank: false,
+					  maxLength: 100
+					},
+					{
+					  fieldLabel: 'Login',
+					  name: 'user[login]',
+					  width: 350,
+					  allowBlank: false,
+					  maxLength: 50
+					},
+					{
+					  fieldLabel: 'E-mail',
+					  name: 'user[email]',
+					  width: 350,
+					  allowBlank: false,
+					  vtype: 'email',
+					  vtypeText: "Invalid e-mail format. Example: user@domain.com",
+					  maxLength: 100
+					},
+					{
+					  fieldLabel: 'Phone',
+					  name: 'user[phone]',
+					  width: 350,
+					  allowBlank: false,
+					  maxLength: 15
+					},
+					{
+					  fieldLabel: 'Password',
+					  name: 'user[password]',
+					  width: 350,
+					  inputType: 'password',
+					  allowBlank: false,
+					  id: 'new_user_password',
+					  maxLength: 100
+					},
+					{
+					  fieldLabel: 'Password Confirmation',
+					  name: 'user[password_confirmation]',
+					  width: 350,
+					  inputType: 'password',
+					  vtype: 'password',
+					  initialPasswordField: 'new_user_password',
+					  allowBlank: false,
+					  maxLength: 100
+					},
+					new Ext.form.TextArea({
+					  fieldLabel: 'Notes',
+					  name: 'user[notes]',
+					  width: 350,
+					  height: 50,
+					  maxLength: 100
+					})
+						]
+				}
+  ],
+  buttons: [
+    {
+      text: 'Add User',
+      handler:function(){
+        if (addUser.getForm().isValid()) {
+          addUser.getForm().submit({
+            url:'<%= url_for :controller => 'users', :action => 'create' %>',
+            waitMsg:'Saving Data...',
+            success: function() {
+              Ext.Msg.alert('User added','The user has been successfully created');
+              updateSubTab('tab_users','sub_tab_users','List','<%= url_for :controller => 'users', :action => 'index' %>');
+              closeSubTab('tab_users','addUser');
+            },
+            failure: function() {Ext.Msg.alert('Error','There has been a problem while creating this request');}
+          });
+        }
+      }
+    },{
+      text: 'Cancel',
+      handler:function() {closeSubTab('tab_users','addUser');}
+    }
+  ]
+});
+
+addUser.render('pcp4erp_users');
+
+</script>
+<br />
+<div style="width:38%;float:left;margin-left:10px;">
+<div id="pcp4erp_users"></div>
+</div>
+<style>
+.x-grid3 {
+    background-color: #FFFFFF;
+    border: 1px solid #D0D0D0;
+}
+.x-fieldset {
+    padding: 0 10px 10px 10px;
+}
+.x-fieldset-bwrap {
+    margin-top: 10px;
+</style>

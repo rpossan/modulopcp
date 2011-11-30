@@ -1,0 +1,23 @@
+<p>
+  <b>Produto:</b>
+  <%=h @produto_processo.produto_id %>
+</p>
+
+<p>
+  <b>Processo:</b>
+  <%=h @produto_processo.processo_id %>
+</p>
+
+<p>
+  <b>Tempo padrao:</b>
+  <%=h @produto_processo.tempo_padrao %>
+</p>
+
+<p>
+  <b>Producao hora:</b>
+  <%=h @produto_processo.producao_hora %>
+</p>
+
+
+<%= link_to 'Edit', edit_produto_processo_path(@produto_processo) %> |
+<%= link_to 'Back', produto_processos_path %>

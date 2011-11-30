@@ -1,0 +1,42 @@
+/******************************************
+ *            Custom CSS
+ ******************************************/
+.tabFibers {
+	background: url(/images/icon_fiber.gif) 0 4px no-repeat !important;
+}
+
+.addNewUser {
+	background: url(/images/User.png) 0 2px no-repeat !important;
+}
+
+.addNewIcon {
+	background: url(/images/new.png) 0 0px no-repeat !important;
+}
+
+.tabIndexIcon {
+	background: url(/images/index_tabs.png) 0 6px no-repeat !important;
+}
+
+.tabWelcomeIcon {
+	background: url(/favicon.png) 0 4px no-repeat !important;
+}
+
+.searchButton {
+	background: url(/images/search.png) 0 0px no-repeat !important;
+}
+
+.deleteIcon {
+	background: url(/images/Recycle_empty.png) 0 4px no-repeat !important;
+}
+
+.showIcon {
+	background: url(/images/show.png) 0 4px no-repeat !important;
+}
+
+.editIcon {
+	background: url(/images/edit.png) 0 4px no-repeat !important;
+}
+
+.newIcon {
+	background: url(/images/new_icon.png) 0 4px no-repeat !important;
+}

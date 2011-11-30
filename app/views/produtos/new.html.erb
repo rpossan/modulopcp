@@ -1,0 +1,56 @@
+<script type="text/javascript">
+
+		var form_newProdutos = new Ext.FormPanel({
+			frame:true,
+			title: 'Crie novo produto conforme formulário abaixo',
+			bodyStyle:'padding:5px 5px 0',
+			style: "margin: 0px auto 0px auto;",
+			width: 520,
+			defaultType: 'textfield',
+			monitorValid: true,
+			items: [
+				{
+					xtype:"fieldset",
+					autoHeight: true,
+					defaults: {width: 350},
+					items: [
+						{ xtype:'textfield', fieldLabel: 'Código', name: 'produto[codigo]', allowBlank:false, maxLength: 50 },
+						{ xtype:'textfield', fieldLabel: 'Nome', name: 'produto[nome]', allowBlank:false, maxLength: 100 },
+						{ xtype:'textfield', fieldLabel: 'Descrição', name: 'produto[descricao]', allowBlank: true, maxLength: 100 },
+						{ xtype:'textarea', fieldLabel: 'Detalhes', name: 'produto[detalhes]', allowBlank: true, maxLength: 50 }
+					]
+				}
+			],
+			buttons: [
+				{
+					text: 'Salvar',
+					handler:function(){
+						if(form_newProdutos.getForm().isValid()){
+							form_newProdutos.getForm().submit({
+								url:'<%= url_for (:controller => 'produtos', :action => 'create') %>',
+								waitMsg:'Saving Data...',
+								success: function(){
+									Ext.Msg.alert('OK','Produto cadastrado com sucesso!');
+									updateSubTab('tab_produtos','sub_tab_produtos','Produtos','<%= produtos_path %>');
+									closeSubTab('tab_produtos', 'sub_tab_produtos_new');
+									<%= params[:closealll] ?  "closeTab('tab_produtos');" : '' %>
+								},
+								failure: function(form, action){
+									if (action.failureType == 'server'){
+										msg = String(Ext.util.JSON.decode(action.response.responseText));
+										Ext.Msg.alert('Validation Error', msg);
+									} else {
+										Ext.Msg.alert('Error', 'There has been a problem while creating this request. Contact the system administrator.');
+									}
+								}
+							});
+						}
+					}
+				},
+				{text: 'Cancel', handler:function(){closeSubTab('tab_produtos','sub_tab_produtos_new');<%= params[:closealll] ?  "closeTab('tab_produtos');" : '' %>}}
+			]
+		});
+
+		form_newProdutos.render('area_form_newProdutos');
+</script>
+<br/><div id="area_form_newProdutos" style="float:left;margin-left:10px;"></div>

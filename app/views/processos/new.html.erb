@@ -1,0 +1,55 @@
+<script type="text/javascript">
+
+		var form_newProcessos = new Ext.FormPanel({
+			frame:true,
+			title: 'Crie novo processo conforme formulário abaixo',
+			bodyStyle:'padding:5px 5px 0',
+			style: "margin: 0px auto 0px auto;",
+			width: 520,
+			defaultType: 'textfield',
+			monitorValid: true,
+			items: [
+				{
+					xtype:"fieldset",
+					autoHeight: true,
+					defaults: {width: 350},
+					items: [
+						{ xtype:'textfield', fieldLabel: 'Código', name: 'processo[codigo]', allowBlank:false, maxLength: 50 },
+						{ xtype:'textfield', fieldLabel: 'Nome', name: 'processo[nome]', allowBlank:false, maxLength: 100 },
+						{ xtype:'textfield', fieldLabel: 'Descrição', name: 'processo[descricao]', allowBlank: true, maxLength: 100 }
+					]
+				}
+			],
+			buttons: [
+				{
+					text: 'Salvar',
+					handler:function(){
+						if(form_newProcessos.getForm().isValid()){
+							form_newProcessos.getForm().submit({
+								url:'<%= url_for (:controller => 'processos', :action => 'create') %>',
+								waitMsg:'Saving Data...',
+								success: function(){
+									Ext.Msg.alert('OK','Processo cadastrado com sucesso!');
+									updateSubTab('tab_processos','sub_tab_processos','Processos','<%= processos_path %>');
+									closeSubTab('tab_processos', 'sub_tab_processos_new');
+									<%= params[:closealll] ?  "closeTab('tab_processos');" : '' %>
+								},
+								failure: function(form, action){
+									if (action.failureType == 'server'){
+										msg = String(Ext.util.JSON.decode(action.response.responseText));
+										Ext.Msg.alert('Validation Error', msg);
+									} else {
+										Ext.Msg.alert('Error', 'There has been a problem while creating this request. Contact the system administrator.');
+									}
+								}
+							});
+						}
+					}
+				},
+				{text: 'Cancel', handler:function(){closeSubTab('tab_processos','sub_tab_processos_new');<%= params[:closealll] ?  "closeTab('tab_processos');" : '' %>}}
+			]
+		});
+
+		form_newProcessos.render('area_form_newProcessos');
+</script>
+<br/><div id="area_form_newProcessos" style="float:left;margin-left:10px;"></div>

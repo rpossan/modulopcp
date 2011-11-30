@@ -1,0 +1,26 @@
+<fieldset width>
+	<legend class="name">Detalhes do Processo <%= @processo.nome %></legend>
+	<p>
+	  <b>Codigo:</b>
+	  <%=h @processo.codigo %>
+	</p>
+
+	<p>
+	  <b>Nome:</b>
+	  <%=h @processo.nome %>
+	</p>
+
+	<p>
+	  <b>Descricao:</b>
+	  <%=h @processo.descricao %>
+	</p>
+</fieldset>
+
+
+<div class="action">
+	<%= link_to 'Edit', "#", :onclick => "addSubTab('tab_processos',
+													'sub_tab_processos_edit_" + @processo.id.to_s + "',
+													'Processo "+@processo.nome.to_s+"' ,
+													'/processos/edit/"+@processo.id.to_s+"' ,
+													'editIcon');closeSubTab('tab_processos','sub_tab_processos_show_" + @processo.id.to_s + "');" %> <span class="pipe">|</span>
+<%= link_to 'Close', "#", :onclick => "closeSubTab('tab_processos','sub_tab_processos_show_" + @processo.id.to_s + "');" %>

@@ -1,0 +1,94 @@
+<script type = "text/javascript">
+
+	function btnShow(value, metaData, record, rowIndex){
+		var ret =  '<div align="center">'+
+					'<a href="#" onclick="showProduto(' + rowIndex + ')">'+
+						'<img src="../images/show.png" title="Show" alt="Show" ></img>'+
+					'</a>'+
+				'</div>';
+		return ret;
+	}
+
+	function btnDelete(value, metaData, record, rowIndex, colIndex, store){
+		var ret =  '<div align="center">'+
+					'<a href="#" onclick="deleteProduto(' + rowIndex + ')">'+
+						'<img src="../images/Recycle_empty.png" title="Delete" alt="Delete" ></img>'+
+					'</a>'+
+				'</div>';
+		return ret;
+	}
+
+	function linkShow(value, metaData, record, rowIndex, colIndex, store){
+		return '<div><a href="#" onclick="editProduto(' + rowIndex + ')">' + value + '</a></div>';
+	}
+
+	function editProduto(idx){
+		var id = store_Produtos.getAt(idx).get('id');
+		var name = store_Produtos.getAt(idx).get('name');
+		addSubTab('tab_produtos', 'sub_tab_produtos_edit_'+id, 'Editing ' + name, '/produtos/edit/' + id, 'editIcon');
+	}
+
+	function deleteProduto(r){
+		var id = store_Produtos.getAt(r).get('id');
+		var name = store_Produtos.getAt(r).get('name');
+		Ext.Msg.confirm('Delete ', 'Confirm delete produto: ' + name, function(btn) {
+		    if (btn == 'yes') {
+				Ext.Ajax.request({
+		          url: 'produtos/destroy/'+id,
+		          success: function(result, req){
+		                var response = Ext.util.JSON.decode(result.responseText);
+						if(response.msg){
+				            Ext.Msg.alert('Warning', response.msg);
+			            }else{
+			      			updateSubTab('tab_produtos', 'sub_tab_produtos', 'List', '<%= produtos_path %>');
+			      			closeSubTab('tab_produtos', 'sub_tab_produtos_edit_' + id);
+			      			closeSubTab('tab_produtos', 'sub_tab_produtos_show_' + id);
+					    }
+		          },
+		          failure: function() {
+		            Ext.Msg.alert('Error','There was a problem while processing this request');
+		          }
+				});
+		    }
+		  });
+	}
+
+	function showProduto(r){
+		var id = store_Produtos.getAt(r).get('id');
+		var name = store_Produtos.getAt(r).get('name');
+		addSubTab('tab_produtos', 'sub_tab_produtos_show_'+id, 'Showing ' + name, '/produtos/show/' + id, 'showIcon');
+	}
+
+	function newProduto(){
+		addSubTab('tab_produtos', 'sub_tab_produtos_new', 'New produto', '<%= url_for(:action => "new") %>', 'newIcon');
+	}
+
+	var store_Produtos = createStore(
+		'<%= url_for(:controller => "produtos", :action => "store", :id => "grid") %>',
+		['id', 'nome', 'codigo', 'descricao', 'detalhes'],
+		[{name: 'id'},{name: 'nome'},{name: 'codigo'},{name: 'descricao'},{name: 'detalhes'}]
+	);
+
+	var pBar = createPBar(store_Produtos, 'produtos');
+
+	<%= include_buttons_produtos %>
+	var btnsProdutos = createProdutosBtns();
+	var cmdBar = createCmdBar(btnsProdutos);
+	var cols =
+		[
+       		{header: 'Nome', dataIndex: 'nome', sortable: true, renderer: linkShow, width: 220},
+      		{header: 'Codigo', dataIndex: 'codigo', sortable: true, width: 220},
+      		{header: 'Descricao', dataIndex: 'descricao', sortable: true, width: 220},
+      		{id: 'edit', dataIndex: 'edit', renderer: btnShow, width: 40},
+      		{id: 'delete', dataIndex: 'delete', renderer: btnDelete, width: 40}
+  		];
+
+  	var grid_Produtos = createGrid(store_Produtos, 'Lista de Produtos', cmdBar, pBar, cols);
+	store_Produtos.load({params: {start:0 , limit:10}});
+	grid_Produtos.render('produtos_index_grid_content');
+
+</script>
+
+<div id = "produtos_index_grid_content">
+  	<!-- AREA TO RENDER GRID  -->
+</div>

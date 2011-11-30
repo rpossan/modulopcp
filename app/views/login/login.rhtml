@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>PCP - Módulo de Gestão de Planejamento e Controle de Produção</title>
+<%= stylesheet_link_tag "pcp4erp", :media => "all" %>
+</head>
+
+<body onLoad="document.loginBox.login.focus();">
+
+<div align="center">
+
+<img src="/images/pcp4erp_logo.gif" width="242" height="70" />
+<br /><br />
+
+<% if flash[:notice] -%>
+<div id="pcp4erp_login_message" style="width: 270px; margin: auto;">
+	<div class="<%=flash[:notice]=="Logged out"?"pcp4erp_success_box":"pcp4erp_error_box"%>">
+            <%= flash[:notice] %>
+        </div>
+</div>
+<br /><br />
+<% end -%>
+
+<div id="pcp4erp_login_box" style="width: 270px; margin: auto;">
+	<div id="pcp4erp_login_form">
+		Por favor, insira seus dados de acesso:<br />
+		<br />
+                <% form_tag({:action => "login"},{:id => "loginBox", :name => "loginBox"}) do %>
+		<label for="name">Usuário:</label><br />
+		<%= text_field_tag :login, params[:login], :size => 25 %>
+		<br />
+		<br />
+		<label for="password">Senha:</label><br />
+		<%= password_field_tag :password, params[:password], :size => 25 %>
+		<br />
+		<br />
+		<%= submit_tag "Login", :class => 'login_button' %>
+        <% end %>
+	</div>
+</div>
+
+<br />
+
+</div>
+
+</body>
+</html>

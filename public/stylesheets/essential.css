@@ -1,0 +1,360 @@
+div.showLogStatus {
+        width: 580px;
+        height: 30px;
+        border: 1px solid #c9cad0;
+        padding: 5px;
+        font-family: Tahoma, sans-serif;
+        background-image: url(/images/msg_bg.png);
+        background-color: #e3e3e3;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+}
+
+textarea.StyledTextArea {
+        width: 578px;
+        height: 50px;
+        border: 2px solid #c9cad0;
+        padding: 5px;
+        font-family: Tahoma, sans-serif;
+        background-image: url(/images/textarea_bg.png);
+        background-color: #e3e3e3;
+        background-position: bottom right;
+        background-repeat: no-repeat;
+}
+
+.Link span{
+	vertical-align: 10px;
+}
+
+.Link{
+	cursor: pointer;
+	color: #0070B7;
+}
+
+.Link span:hover{
+	color: #DA251D;
+	text-decoration: underline;
+}
+
+.comboboxRows td, th{
+    padding: 0 1em;
+	text-align: left;
+	border: 1px solid #AEAEAE;
+	font-size: 11px;
+}
+
+table.simpleTable{
+}
+
+table.simpleTable td, th {
+    padding: 0 1em;
+	text-align: left;
+	border: 1px solid #AEAEAE;
+	font-size: 11px;
+}
+
+table.simpleTable th {
+	font-style: italic;
+	font-weight: bold;
+	text-align: center;
+
+}
+
+.NoTopPadding{
+	padding-top: 0px;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-bottom: 10px;
+	background-color: #FCFCFC;
+	overflow-y: auto;
+}
+
+.tabContent{
+	padding: 10px;
+	background-color: #FCFCFC;
+	overflow-y: auto;
+}
+
+/* for all the system*/
+.ExtPage{
+	padding: 10px;
+	/*float:left; Removido,pois estava quebrando as p�ginas*/
+}
+
+a{
+	color: #0070B7;
+}
+
+a:hover {
+  color:#DA251D;
+}
+/*font-family: Verdana, Arial, Helvetica, sans-serif;*/
+
+
+/*Show */
+.ShowPage{
+	font-size: 13px;
+}
+
+.ShowPage p{
+	font-size: 11px;
+	padding: 5px 10px 5px 10px;
+}
+
+.ShowPage a{
+	font-size: 14px;
+}
+
+a.link{
+	font-size: 12px;
+	text-align: left;
+}
+.ShowPage b{
+	font-size: 12px;
+
+}
+.ShowPage h1{
+	border-bottom:3px dotted #AEAEAE ;
+	width: 100%;
+	color: red;
+	font-size: 25px;
+	margin-bottom:10px;
+}
+
+.ShowPage fieldset {
+ 	border: 1px solid #99BBE8;
+ 	width: 40%;/*tamanho do filedset*/;
+
+
+}
+.ShowPage legend {
+	font-size: 14px;
+	font-style: normal;
+	font-weight: bold;
+	color:#15428B;
+	margin-left:5px;
+}
+.ShowPage legend.name {
+ 	font-size: 14px;
+}
+
+.ShowPage div.action {
+	padding: 10px;
+	text-align: left;
+	width:30%;
+}
+
+.ShowPage table {
+	padding: 5px;
+	width:100%;
+	line-height: 155%;
+}
+.ShowPage th {
+	font-size: 12px;
+	font-weight: bold;
+	width:13%;
+	text-align: left;
+	border:transparent;
+	vertical-align:top;
+	line-height: 1.8em;
+}
+
+.ShowPage td {
+	font-size: 12px;
+	text-align: left;
+    width:87%;
+    height:100%;
+	border:transparent;
+}
+
+.ShowPage table.addr th {
+	width:15%;
+}
+.ShowPage table.addr td {
+	width:85%;
+}
+
+.ShowPage  span{
+	font-weight: bold;
+	font-size: 12px;
+}
+.ShowPage span.pipe
+{
+	color:#99BBE8;
+}
+
+
+/*User-show*/
+
+.ShowPage fieldset.user {
+ 	width:30%; /*tamanho do filedset*/
+}
+.ShowPage table.user th {
+	width:20%;
+}
+.ShowPage table.user td {
+	width:80%;
+}
+
+
+/*Team-show*/
+
+.ShowPage fieldset.team {
+ 	width:40%;/*tamanho do filedset*/;
+}
+
+.ShowPage table.team  {
+	padding-bottom: 0px;
+
+}
+
+.ShowPage table.team th {
+	width:48%;
+
+}
+
+.ShowPage table.team td {
+	width:52%;
+
+}
+
+/*User-RTU*/
+
+.ShowPage fieldset.rtu {
+ 	width:40%;/*tamanho do filedset*/;
+}
+.ShowPage table.rtu th {
+	width:30%;
+}
+.ShowPage table.rtu td {
+	width:70%;
+}
+
+.ShowPage fieldset.referencep {
+ 	width:40%;/*tamanho do filedset*/;
+}
+.ShowPage table.referencep th {
+	width:40%;
+}
+.ShowPage table.referencep td {
+	width:60%;
+}
+
+
+/*Region*/
+
+.ShowPage fieldset.region {
+ 	width:30%;/*tamanho do filedset*/;
+}
+.ShowPage table.region th {
+	width:30%;
+}
+.ShowPage table.region td {
+	width:70%;
+}
+
+/*showFieldset*/
+.ShowPage fieldset.showFieldset { width:30%;/*tamanho do filedset*/;}
+.ShowPage table.showFieldset th {	width:30%;  font-size: 13px;}
+.ShowPage table.showFieldset td {	width:70%;  font-size: 13px;}
+
+/*showFieldset2*/
+.ShowPage fieldset.showFieldset2 { width:40%;/*tamanho do filedset*/;}
+.ShowPage table.showFieldset2 th {	width:30%;  font-size: 13px;}
+.ShowPage table.showFieldset2 td {	width:70%;  font-size: 13px;}
+
+/*showFieldsetPopup*/
+.ShowPage fieldset.showFieldsetPopup { width:100%;/*tamanho do filedset*/}
+
+.ShowPage fieldset.addr {
+	width:30%;
+}
+
+.ShowPage table.addr th {
+	width:15%;
+}
+.ShowPage table.addr td {
+	width:85%;
+}
+
+/*Fiber*/
+
+.ShowPage fieldset.fiber {
+ 	width:40%;/*tamanho do filedset*/;
+}
+.ShowPage table.fiber th {
+	width:20%;
+}
+.ShowPage table.fiber td {
+	width:80%;
+}
+.ShowPage fieldset.fiber1 {
+ 	width:40%;/*tamanho do filedset*/;
+}
+.ShowPage table.fiber1 th {
+	width:48%;
+}
+.ShowPage table.fiber1 td {
+	width:52%;
+}
+
+/*Reports*/
+
+h1.report{
+border:none;
+font-size:20px;
+font-weight: bold;
+text-align: center;
+padding:10px;
+
+}
+
+
+/*User-Dummies*/
+
+.ShowPage fieldset.dummies {
+ 	width:40%;/*tamanho do filedset*/;
+ 	margin-left:10px;
+ 	margin-top:10px;
+}
+.ShowPage table.dummies th {
+	width:20%;
+}
+.ShowPage table.dummies td {
+	width:80%;
+}
+
+
+.ShowPage table.pdetailsview {
+	width:48%;
+	float:left;
+	padding-top: 0px;
+	border-right:  0.5px solid #d0d0d0;
+
+}
+
+.ShowPage table.pdetailsview th {
+	width:20%;
+
+}
+
+.ShowPage table.pdetailsview td {
+	width:80%;
+	text-align: left;
+
+}
+
+.ShowPage table.pdetailsview3  {
+	width:52%;
+	float:right;
+	padding-top: 0px;
+
+}
+.ShowPage table.pdetailsview3 th {
+	width:30%;
+
+}
+
+.ShowPage table.pdetailsview3 td {
+	width:70%;
+}

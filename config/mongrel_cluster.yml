@@ -1,0 +1,9 @@
+---
+address: 127.0.0.1
+log_file: log/mongrel.log
+port: "8000"
+cwd: /home/pcp4erp
+environment: production
+pid_file: tmp/pids/mongrel.pid
+servers: 5
+

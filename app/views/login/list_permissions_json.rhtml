@@ -1,0 +1,9 @@
+<% headers["Content-Type"]='text/plain' %>
+{root:[
+<% size = 0 %>
+<% for profile in @permissions %>
+  {"key": "<%=profile.id%>", "value": "<%=profile.name%>"}
+  <% size = size +1
+  if size < @permissions.size %>,<%end%>
+<% end %>
+]}

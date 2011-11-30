@@ -1,0 +1,64 @@
+<script type="text/javascript">
+    var form_newProcessos_<%= @processo.id %> = new Ext.FormPanel
+	    ({
+	      frame:true,
+	      title: 'Editando processo <%= @processo.nome %>',
+	      bodyStyle:'padding:5px 5px 0',
+	      style: "margin: 0px auto 0px auto;",
+	      width: 520,
+	      defaultType: 'textfield',
+	      monitorValid: true,
+	      items: [{xtype:"fieldset",
+					 defaults: {width: 350},
+					autoHeight: true,
+                   	items:[
+						{ xtype:'textfield', fieldLabel: 'Código', name: 'processo[codigo]', value:'<%= @processo.codigo %>', allowBlank:false, maxLength: 50 },
+	                   	{ xtype:'textfield', fieldLabel: 'Nome', name: 'processo[nome]', value:'<%= @processo.nome %>', allowBlank:false, maxLength: 100 },
+						{ xtype:'textfield', fieldLabel: 'Descrição', name: 'processo[descricao]', value:'<%= @processo.descricao %>', allowBlank: true, maxLength: 100 }
+					]
+                 }
+                 ],
+			buttons: [
+      				{
+		      			text: 'Salvar',
+						handler:function(){
+		                   	if(form_newProcessos_<%= @processo.id %>.getForm().isValid()){
+								form_newProcessos_<%= @processo.id %>.getForm().submit({
+		                    		url:'/processos/update/<%= @processo.id %>',
+		                           	waitMsg:'Saving Data...',
+		                           	success: function(){
+										Ext.Msg.alert('OK','Processo alterado com sucesso!');
+										updateSubTab('tab_processos','sub_tab_processos','Processos','<%= processos_path %>');
+										closeSubTab('tab_processos','sub_tab_processos_edit_<%= @processo.id %>');},
+									failure: function(form, action){
+										if (action.failureType == 'server'){
+											msg = String(Ext.util.JSON.decode(action.response.responseText));
+		                                   	Ext.Msg.alert('Validation Error', msg);
+	                                   	}
+		                               	else{
+		                               		Ext.Msg.alert('Error', 'There has been a problem while creating this request. Contact the system administrator.');
+	                               		}
+	                              	}
+	                         	});
+							}
+						}
+	                },
+	                {text: 'Cancel', handler:function(){closeSubTab('tab_processos','sub_tab_processos_edit_<%= @processo.id %>');}
+	               }
+			]
+	    });
+    form_newProcessos_<%= @processo.id %>.render( 'area_form_editProcessos_<%= @processo.id %>');
+</script>
+<br/>
+<div id="area_form_editProcessos_<%= @processo.id %>" style="float:left;margin-left:10px;"></div>
+<style>
+.x-grid3 {
+    background-color: #FFFFFF;
+    border: 1px solid #D0D0D0;
+}
+.x-fieldset {
+    padding: 0 10px 10px 10px;
+}
+.x-fieldset-bwrap {
+    margin-top: 10px;
+</style>

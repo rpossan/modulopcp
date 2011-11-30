@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Optimaster - Optical Network Surveillance System</title>
+<%= stylesheet_link_tag "optimaster", :media => "all" %>
+<!--[if IE]>
+<%= stylesheet_link_tag "optimaster_ie" %>
+<![endif]-->
+</head>
+
+<body onLoad="document.loginBox.name.focus();">
+
+<div align="center">
+
+<img src="/images/optimaster_logo.gif" alt="Optimaster - Optical Network Surveillance System" width="242" height="70" />
+<br /><br />
+
+<% if flash[:notice] -%>
+<div id="optimaster_login_message" style="width: 270px; margin: auto;">
+	<div class="<%=flash[:notice]=="Logged out"?"optimaster_success_box":"optimaster_error_box"%>">
+            <%= flash[:notice] %>
+        </div>
+</div>
+<br /><br />
+<% end -%>
+
+<div id="optimaster_login_box" style="width: 270px; margin: auto;">
+	<div id="optimaster_login_tab">
+		<img src="/images/tab_login.gif" alt="Login" width="108" height="21" />
+	</div>
+	<div class="optimaster_line"></div>
+	<div id="optimaster_login_form">
+		Please, enter your login information:<br />
+		<br />
+                <% form_tag({:action => "login"},{:id => "loginBox", :name => "loginBox"}) do %>
+		<label for="name">Username:</label><br />
+		<%= text_field_tag :login, params[:login], :size => 25 %>
+		<br />
+		<br />
+		<label for="password">Password:</label><br />
+		<%= password_field_tag :password, params[:password], :size => 25 %>
+		<br />
+		<br />
+		<%= submit_tag "Login", :class => 'login_button' %>
+                <% end %>
+	</div>
+	<div class="optimaster_line"></div>
+</div>
+
+<br />
+<a href="http://www.fiberwork.net" target="_blank"><img src="/images/fiberwork_logo.gif" alt="FiberWork Optical Communications" width="127" height="32" border="0" /></a>
+
+</div>
+
+</body>
+</html>

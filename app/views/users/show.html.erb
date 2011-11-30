@@ -1,0 +1,41 @@
+	<fieldset class="user" >
+		<legend class="name">
+			 User Data
+		</legend>
+		<table class="user">
+			<tr>
+			  <th>Name:</th>
+			  <td> <%=h @user.name %></td>
+			</tr>
+			<tr>
+			  <th>Login:</th>
+			  <td> <%=h @user.login %></td>
+			</tr>
+			<tr>
+			  <th>Email:</th>
+			  <td> <%=h @user.email %></td>
+			</tr>
+			<tr>
+			  <th>Phone:</th>
+			  <td><%=h @user.phone %></td>
+			</tr>
+			 <th>Notes:</th>
+			  <td> <%=h @user.notes %></td>
+			</tr>
+		</table>
+	</fieldset>
+<% if params[:ticket] %>
+	<div class="action" style="width:40%">
+		<%= link_to 'Close', "#", :onclick => "closeTab('tab_users','Ack User');" %>
+	</div>
+<% else %>
+		<div class="action" style="width:40%">
+			<%= link_to 'Edit', "#", :onclick => "addSubTab('tab_users',
+															'userEdit_" + @user.id.to_s + "',
+															'User "+@user.login.to_s+"' ,
+															'/users/edit/"+@user.id.to_s+"' ,
+															'editIcon');closeSubTab('tab_users','userShow_" + @user.id.to_s + "');" %> <span class="pipe">|</span>
+
+		<%= link_to 'Close', "#", :onclick => "closeSubTab('tab_users','userShow_" + @user.id.to_s + "');" %>
+		</div>
+<% end %>

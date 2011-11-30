@@ -1,0 +1,93 @@
+<script type = "text/javascript">
+
+	function btnShow(value, metaData, record, rowIndex){
+		var ret =  '<div align="center">'+
+					'<a href="#" onclick="showProdutoProcesso(' + rowIndex + ')">'+
+						'<img src="../images/show.png" title="Show" alt="Show" ></img>'+
+					'</a>'+
+				'</div>';
+		return ret;
+	}
+
+	function btnDelete(value, metaData, record, rowIndex, colIndex, store){
+		var ret =  '<div align="center">'+
+					'<a href="#" onclick="deleteProdutoProcesso(' + rowIndex + ')">'+
+						'<img src="../images/Recycle_empty.png" title="Delete" alt="Delete" ></img>'+
+					'</a>'+
+				'</div>';
+		return ret;
+	}
+
+	function linkShow(value, metaData, record, rowIndex, colIndex, store){
+		return '<div><a href="#" onclick="editProdutoProcesso(' + rowIndex + ')">' + value + '</a></div>';
+	}
+
+	function editProdutoProcesso(idx){
+		var id = store_ProdutoProcessos.getAt(idx).get('id');
+		var name = store_ProdutoProcessos.getAt(idx).get('name');
+		addSubTab('tab_produto_processos', 'sub_tab_produto_processos_edit_'+id, 'Editing ' + name, '/produto_processos/edit/' + id, 'editIcon');
+	}
+
+	function deleteProdutoProcesso(r){
+		var id = store_ProdutoProcessos.getAt(r).get('id');
+		var name = store_ProdutoProcessos.getAt(r).get('name');
+		Ext.Msg.confirm('Delete ', 'Confirm delete produto_processo: ' + name, function(btn) {
+		    if (btn == 'yes') {
+				Ext.Ajax.request({
+		          url: 'produto_processos/destroy/'+id,
+		          success: function(result, req){
+		                var response = Ext.util.JSON.decode(result.responseText);
+						if(response.msg){
+				            Ext.Msg.alert('Warning', response.msg);
+			            }else{
+			      			updateSubTab('tab_produto_processos', 'sub_tab_produto_processos', 'List', '<%= produto_processos_path %>');
+			      			closeSubTab('tab_produto_processos', 'sub_tab_produto_processos_edit_' + id);
+			      			closeSubTab('tab_produto_processos', 'sub_tab_produto_processos_show_' + id);
+					    }
+		          },
+		          failure: function() {
+		            Ext.Msg.alert('Error','There was a problem while processing this request');
+		          }
+				});
+		    }
+		  });
+	}
+
+	function showProdutoProcesso(r){
+		var id = store_ProdutoProcessos.getAt(r).get('id');
+		var name = store_ProdutoProcessos.getAt(r).get('name');
+		addSubTab('tab_produto_processos', 'sub_tab_produto_processos_show_'+id, 'Showing ' + name, '/produto_processos/show/' + id, 'showIcon');
+	}
+
+	function newProdutoProcesso(){
+		addSubTab('tab_produto_processos', 'sub_tab_produto_processos_new', 'New produto_processo', '<%= url_for(:action => "new") %>', 'newIcon');
+	}
+
+	var store_ProdutoProcessos = createStore(
+		'<%= url_for(:controller => "produto_processos", :action => "store", :id => "grid") %>',
+		['id', 'produto_id', 'processo_id'],
+		[{name: 'id'},{name: 'produto_id'},{name: 'processo_id'}]
+	);
+
+	var pBar = createPBar(store_ProdutoProcessos, 'produto_processos');
+
+	<%= include_buttons_produto_processos %>
+	var btnsProdutoProcessos = createProdutoProcessosBtns();
+	var cmdBar = createCmdBar(btnsProdutoProcessos);
+	var cols =
+		[
+       		{header: 'Produto', dataIndex: 'produto_id', sortable: true, renderer: linkShow, width: 220},
+      		{header: 'Processo', dataIndex: 'processo_id', sortable: true, width: 220},
+      		{id: 'edit', dataIndex: 'edit', renderer: btnShow, width: 40},
+      		{id: 'delete', dataIndex: 'delete', renderer: btnDelete, width: 40}
+  		];
+
+  	var grid_ProdutoProcessos = createGrid(store_ProdutoProcessos, 'Lista de ProdutoProcessos', cmdBar, pBar, cols);
+	store_ProdutoProcessos.load({params: {start:0 , limit:10}});
+	grid_ProdutoProcessos.render('produto_processos_index_grid_content');
+
+</script>
+
+<div id = "produto_processos_index_grid_content">
+  	<!-- AREA TO RENDER GRID  -->
+</div>

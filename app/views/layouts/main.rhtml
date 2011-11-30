@@ -1,0 +1,107 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<title>PCP :: Módulo de Gestão de Planejamento e Controle de Produção</title>
+		<link REL="SHORTCUT ICON" HREF="favicon.png">
+		<%= stylesheet_link_tag "essential", "pcp4erp", "pcp4erp_tabs", "custom", :media => "all" %>
+		<%= stylesheet_link_tag "/ext-3.4.0/examples/ux/fileuploadfield/css/fileuploadfield.css" %>
+		<%= javascript_include_tag :defaults %>
+		<%= stylesheet_link_tag "/ext-3.4.0/resources/css/ext-all.css" %>
+		<%= stylesheet_link_tag "/ext-3.4.0/resources/css/xtheme-gray.css" %>
+		<%= javascript_include_tag "/ext-3.4.0/adapter/ext/ext-base.js" %>
+		<%= javascript_include_tag "/ext-3.4.0/ext-all.js" %>
+		<%= javascript_include_tag "/ext-3.4.0/examples/ux/fileuploadfield/FileUploadField.js" %>
+		<%= javascript_include_tag 'pcp4erp_helpers' %>
+		<%= javascript_include_tag 'pcp4erp' %>
+	</head>
+	<body>
+		<div id="west" style="height: 250px;">
+			<br/>
+				<h1>PCP</h1>
+				Planejamento e Controle de Produção
+			<br/>
+			<br/>
+		</div>
+		<div id="north"></div>
+		<div id="center1">
+			<div class="welcome_screen" style="text-align:center;padding:15px;">
+				<%= image_tag('pcp1.jpg') %>
+				<h1>Módulo de Planejamento e Controle de Produção para sistemas ERP</h1>
+			</div>
+		</div>
+		<div id="props-panel" style="width:200px;height:200px;overflow:hidden;"></div>
+		<div id="cadastros">
+			<ul>
+				<div
+				style="cursor:pointer;"
+				onMouseOver="setMouseOver(this, 'mnProdutos')"
+				onMouseOut="setMouseOut(this, 'mnProdutos')"
+				onclick="addNewTab('tab_produtos', 'Produtos','List', 'produtos', 'produtos-icon')">
+					<li>
+						<a id="mnProdutos" href="#">Produtos</a>
+					</li>
+				</div>
+				<div
+				style="cursor:pointer;"
+				onMouseOver="setMouseOver(this, 'mnUsers')"
+				onMouseOut="setMouseOut(this, 'mnUsers')"
+				onclick="addNewTab('tab_users', 'Usários','List', 'users', 'user-icon')">
+					<li>
+						<a id="mnUsers" href="#">Usuários</a>
+					</li>
+				</div>
+			</ul>
+		</div>
+		<div id="engenharia">
+			<ul>
+				<div
+				style="cursor:pointer;"
+				onMouseOver="setMouseOver(this, 'mnEquipamento')"
+				onMouseOut="setMouseOut(this, 'mnEquipamento')"
+				onclick="addNewTab('tab_equipamentos', 'Equipamentos','List', 'equipamentos', 'equipamentos-icon')">
+					<li>
+						<a id="mnEquipamento" href="#">Equipamentos</a>
+					</li>
+				</div>
+				<div
+				style="cursor:pointer;"
+				onMouseOver="setMouseOver(this, 'mnOperacoes')"
+				onMouseOut="setMouseOut(this, 'mnOperacoes')"
+				onclick="addNewTab('tab_processos', 'Operações', 'List', 'processos', 'operacoes-icon')">
+					<li>
+						<a id="mnOperacoes" href="#">Operações</a>
+					</li>
+				</div>
+				<div
+				style="cursor:pointer;"
+				onMouseOver="setMouseOver(this, 'mnManufatura')"
+				onMouseOut="setMouseOut(this, 'mnManufatura')"
+				onclick="addNewTab('tab_produto_processos', 'Processos de Fabricação','List', 'produto_processos', 'manufaturas-icon')">
+					<li>
+						<a id="mnManufatura" href="#">Processos de Fabricação</a>
+					</li>
+				</div>
+			</ul>
+		</div>
+		<div id="pcp">
+			<ul>
+				<div
+				style="cursor:pointer;"
+				onMouseOver="setMouseOver(this, 'mnPedidos')"
+				onMouseOut="setMouseOut(this, 'mnPedidos')"
+				style="cursor:pointer;"
+				onclick="addNewTab('tab_pedidos', 'Pedidos','List', 'pedidos', 'pedidos-icon')">
+					<li>
+						<a id="mnPedidos" href="#">Pedidos</a>
+					</li>
+				</div>
+			</ul>
+		</div>
+		<div id="logout">
+			<ul>
+				<a href="#" onclick="confirmLogout();">Logout</a></strong>
+			</ul>
+		</div>
+	</body>
+</html>

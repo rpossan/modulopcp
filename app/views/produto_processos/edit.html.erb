@@ -1,0 +1,28 @@
+<h1>Editing produto_processo</h1>
+
+<% form_for(@produto_processo) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :produto_id %><br />
+    <%= f.text_field :produto_id %>
+  </p>
+  <p>
+    <%= f.label :processo_id %><br />
+    <%= f.text_field :processo_id %>
+  </p>
+  <p>
+    <%= f.label :tempo_padrao %><br />
+    <%= f.text_field :tempo_padrao %>
+  </p>
+  <p>
+    <%= f.label :producao_hora %><br />
+    <%= f.text_field :producao_hora %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @produto_processo %> |
+<%= link_to 'Back', produto_processos_path %>

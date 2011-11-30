@@ -1,0 +1,107 @@
+<script type="text/javascript">
+var txtPassword_<%= @user.id %> =
+new Ext.form.TextField({
+    fieldLabel: 'Password',
+    name: 'user[password]',
+    inputType: 'password',
+    allowBlank: false
+});
+
+var txtPasswordConfirmation_<%= @user.id %> =
+new Ext.form.TextField({
+    fieldLabel: 'Password Confirmation',
+    name: 'user[password_confirmation]',
+    inputType: 'password',
+    initialPasswordField: 'new_user_password',
+    allowBlacompany_namenk: false
+});
+
+	var user_notes = "";
+	<% teste = @user.notes.gsub(/\n[\r]*/,"\\n") %>
+	<% teste.each_line do |line| %>
+	user_notes += "<%= line.to_s %>";
+	<% end %>
+
+
+var editUser<%= @user.id %> =
+new Ext.FormPanel({
+    frame:true,
+    title: 'Editing User: <%= @user.name %>',
+    bodyStyle:'padding:5px 5px 0',
+    style: "margin: 0px auto 0px auto;",
+    width: 520,
+    defaultType: 'textfield',
+    monitorValid: true,
+    items:[{xtype:"fieldset",
+            autoHeight:true,
+
+            defaults: {width: 350},
+            items:[
+					{xtype: 'textfield', fieldLabel: 'Name', name: 'user[name]', allowBlank:false, value: '<%= @user.name %>', maxLength: 100},
+					{xtype: 'textfield', fieldLabel: 'Login', name: 'user[login]', allowBlank:false, value: '<%= @user.login %>', maxLength: 50},
+					{xtype: 'textfield', fieldLabel: 'E-mail', name: 'user[email]', allowBlank:false, value: '<%= @user.email %>', maxLength: 100,vtype: 'email', vtypeText: "Invalid e-mail format. Example: user@domain.com"},
+					{xtype: 'textfield', fieldLabel: 'Phone', name: 'user[phone]', allowBlank:false, value: '<%= @user.phone %>', maxLength: 15},
+					{xtype:'textarea', fieldLabel: 'Notes', name: 'user[notes]', allowBlank:true, value: user_notes , maxLength: 500}
+                  ]},
+                   {xtype:"fieldset",
+                    title:" Change password",
+                    autoHeight:true,
+                    checkboxToggle:true,
+                    checkboxName: 'change_password',
+                    collapsed: true,
+                    labelWidth:140,
+                    listeners:
+                       {expand: function()
+                           {txtPassword_<%= @user.id %>.allowBlank = false;
+                            txtPasswordConfirmation_<%= @user.id %>.allowBlank = false;},
+                        collapse: function()
+                           {txtPassword_<%= @user.id %>.allowBlank = true;
+                            txtPasswordConfirmation_<%= @user.id %>.allowBlank = true;}
+                       },
+            		items:[txtPassword_<%= @user.id %>,
+                   	txtPasswordConfirmation_<%= @user.id %>,
+                  	new Ext.form.Hidden({xtype: 'textfield', type: 'hidden', name: 'user[id]', value: <%= @user.id %>
+					})
+                  ]
+           }
+    ],
+	buttons: [
+    {
+      text: 'Save',
+      handler:function() {
+        if (editUser<%= @user.id %>.getForm().isValid()) {
+          editUser<%= @user.id %>.getForm().submit({
+            url:'/users/update/<%= @user.id %>',
+            waitMsg:'Saving Data...',
+            success: function(){
+              Ext.Msg.alert('User saved','The user has been successfully updated');
+             updateSubTab('tab_users','sub_tab_users','List','<%= url_for :controller => 'users', :action => 'index' %>');
+              closeSubTab('tab_users', 'userEdit_<%= @user.id %>');
+            },
+            failure: function(){Ext.Msg.alert('Error','There has been a problem while creating this request')}
+          });
+        }
+      }
+    },{
+      text: 'Cancel',
+      handler:function(){
+      closeSubTab('tab_users', 'userEdit_<%= @user.id %>');
+      }
+  }]
+});
+
+editUser<%= @user.id %>.render('div_edit_user<%= @user.id %>');
+</script>
+<br/>
+<div id="div_edit_user<%= @user.id %>" style="float:left;margin-left:10px;"></div>
+<style>
+.x-grid3 {
+    background-color: #FFFFFF;
+    border: 1px solid #D0D0D0;
+}
+.x-fieldset {
+    padding: 0 10px 10px 10px;
+}
+.x-fieldset-bwrap {
+    margin-top: 10px;
+</style>

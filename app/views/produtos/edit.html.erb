@@ -1,0 +1,65 @@
+<script type="text/javascript">
+    var form_newProdutos_<%= @produto.id %> = new Ext.FormPanel
+	    ({
+	      frame:true,
+	      title: 'Editando produto <%= @produto.nome %>',
+	      bodyStyle:'padding:5px 5px 0',
+	      style: "margin: 0px auto 0px auto;",
+	      width: 520,
+	      defaultType: 'textfield',
+	      monitorValid: true,
+	      items: [{xtype:"fieldset",
+					 defaults: {width: 350},
+					autoHeight: true,
+                   	items:[
+						{ xtype:'textfield', fieldLabel: 'Código', name: 'produto[codigo]', value:'<%= @produto.codigo %>', allowBlank:false, maxLength: 50 },
+	                   	{ xtype:'textfield', fieldLabel: 'Nome', name: 'produto[nome]', value:'<%= @produto.nome %>', allowBlank:false, maxLength: 100 },
+						{ xtype:'textfield', fieldLabel: 'Descrição', name: 'produto[descricao]', value:'<%= @produto.descricao %>', allowBlank: true, maxLength: 100 },
+						{ xtype:'textarea', fieldLabel: 'Detalhes', name: 'processo[detalhes]', value:'<%= @processo.detalhes %>', allowBlank: true, maxLength: 50 }
+					]
+                 }
+                 ],
+			buttons: [
+      				{
+		      			text: 'Salvar',
+						handler:function(){
+		                   	if(form_newProdutos_<%= @produto.id %>.getForm().isValid()){
+								form_newProdutos_<%= @produto.id %>.getForm().submit({
+		                    		url:'/produtos/update/<%= @produto.id %>',
+		                           	waitMsg:'Saving Data...',
+		                           	success: function(){
+										Ext.Msg.alert('OK','Produto alterado com sucesso!');
+										updateSubTab('tab_produtos','sub_tab_produtos','Produtos','<%= produtos_path %>');
+										closeSubTab('tab_produtos','sub_tab_produtos_edit_<%= @produto.id %>');},
+									failure: function(form, action){
+										if (action.failureType == 'server'){
+											msg = String(Ext.util.JSON.decode(action.response.responseText));
+		                                   	Ext.Msg.alert('Validation Error', msg);
+	                                   	}
+		                               	else{
+		                               		Ext.Msg.alert('Error', 'There has been a problem while creating this request. Contact the system administrator.');
+	                               		}
+	                              	}
+	                         	});
+							}
+						}
+	                },
+	                {text: 'Cancel', handler:function(){closeSubTab('tab_produtos','sub_tab_produtos_edit_<%= @produto.id %>');}
+	               }
+			]
+	    });
+    form_newProdutos_<%= @produto.id %>.render( 'area_form_editProdutos_<%= @produto.id %>');
+</script>
+<br/>
+<div id="area_form_editProdutos_<%= @produto.id %>" style="float:left;margin-left:10px;"></div>
+<style>
+.x-grid3 {
+    background-color: #FFFFFF;
+    border: 1px solid #D0D0D0;
+}
+.x-fieldset {
+    padding: 0 10px 10px 10px;
+}
+.x-fieldset-bwrap {
+    margin-top: 10px;
+</style>

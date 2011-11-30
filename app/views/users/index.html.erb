@@ -1,0 +1,116 @@
+<script type = "text/javascript">
+
+	function btnShow(value, metaData, record, rowIndex){
+		var ret =  '<div align="center">'+
+					'<a href="#" onclick="showUser(' + rowIndex + ')">'+
+						'<img src="../images/show.png" title="Show" alt="Show" ></img>'+
+					'</a>'+
+				'</div>';
+		return ret;
+	}
+
+	function btnPermission(value, metaData, record, rowIndex){
+		var ret =  '<div align="center">'+
+					'<a href="#" onclick="userPermission(' + rowIndex + ')">'+
+						'<img src="../images/permission2.jpg" title="Permissions" alt="Permissions" ></img>'+
+					'</a>'+
+				'</div>';
+		return ret;
+	}
+
+	function btnDelete(value, metaData, record, rowIndex, colIndex, store){
+		var ret =  '<div align="center">'+
+					'<a href="#" onclick="deleteUser(' + rowIndex + ')">'+
+						'<img src="../images/Recycle_empty.png" title="Delete" alt="Delete" ></img>'+
+					'</a>'+
+				'</div>';
+		return ret;
+	}
+   function deleteUser(r){
+		var id = store_Users.getAt(r).get('id');
+		var login = store_Users.getAt(r).get('login');
+		Ext.Msg.confirm('Delete ', 'Confirm delete user: ' + login, function(btn) {
+		    if (btn == 'yes') {
+				Ext.Ajax.request({
+		          url: 'users/destroy/'+id,
+		          success: function(result, req){
+		                var response = Ext.util.JSON.decode(result.responseText);
+						if(response.msg){
+				            Ext.Msg.alert('Warning', response.msg);
+			            }else{
+			      			 updateSubTab('tab_users', 'sub_tab_users', 'List', '<%= users_path %>');
+		     				 closeSubTab('tab_users', 'userEdit'+ id);
+			      			 closeSubTab('tab_users', 'userShow_' + id);
+					    }
+		          },
+		          failure: function() {
+		            Ext.Msg.alert('Error','There was a problem while processing this request');
+		          }
+				});
+		    }
+		  });
+	}
+
+	function userPermission(r){
+		var id = store_Users.getAt(r).get('id');
+		var login = store_Users.getAt(r).get('login');
+		addSubTab('tab_users', 'userPermission_'+ id, 'User:'+login , '/users/permissions/' + id, 'editIcon');
+
+	}
+	function newUser(){
+		      addSubTab('tab_users', 'addUser', 'New user', '<%= url_for(:action => "new") %>', 'newIcon');
+	}
+	function linkShow(value, metaData, record, rowIndex, colIndex, store){
+		return '<div><a href="#" onclick="editUser(' + rowIndex + ')">' + value + '</a></div>';
+	}
+
+	function editUser(r){
+		var id = store_Users.getAt(r).get('id');
+		var login = store_Users.getAt(r).get('login');
+			addSubTab('tab_users', 'userEdit_'+ id, 'User:'+login , '/users/edit/' + id, 'editIcon');
+
+	}
+
+	function showUser(r){
+		var id = store_Users.getAt(r).get('id');
+		var login = store_Users.getAt(r).get('login');
+		addSubTab('tab_users', 'userShow_'+id, 'Showing ' + login, '/users/show/' + id, 'showIcon');
+	}
+
+
+	var store_Users =
+	createStore(
+		'<%= url_for(:controller => "users", :action => "store", :id => "grid" ) %>',
+		['id', 'name', 'login'],
+		[{name: 'id'}, {name: 'name'}, {name: 'login'}, {name: 'email'}, {name: 'phone'}]
+	);
+
+
+		var pBar = createPBar(store_Users, 'users');
+
+	<%= include_buttons_users %>
+	var btnsUsers = createUsersBtns();
+	var cmdBar = createCmdBar(btnsUsers);
+	var cols =
+			[
+       		{id: 'name', header: 'Name', dataIndex: 'name',renderer: linkShow, sortable: true, width: 220},
+       		{id: 'login', header: 'Login', dataIndex: 'login', sortable: true, width: 220},
+       		{id: 'email', header: 'E-mail', dataIndex: 'email', sortable: true, width: 220},
+       		{id: 'phone', header: 'Phone', dataIndex: 'phone',sortable: true, width: 120},
+      		{id: 'edit', dataIndex: 'edit', renderer: btnShow, width: 40},
+      		{id: 'delete', dataIndex: 'delete', renderer: btnDelete, width: 40}
+      		];
+
+  	var grid_Users = createGrid(store_Users, 'Users List', cmdBar, pBar, cols);
+	store_Users.load({params: {start:0 , limit:10}});
+	grid_Users.render('users_index_grid_content');
+
+</script>
+<br />
+<div id = "users_index_grid_content" style="margin-left:15px;margin-right:15px;">
+  	<!-- AREA TO RENDER GRID  -->
+</div>
+
+<br />
+
+
