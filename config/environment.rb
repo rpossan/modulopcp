@@ -43,7 +43,7 @@ Rails::Initializer.run do |config|
   # config.log_level = :debug
 
   #Config of rotate log files
-  config.logger = Logger.new("#{RAILS_ROOT}/log/#{ENV['RAILS_ENV']}.log", 10, 1048576)
+  #config.logger = Logger.new("#{RAILS_ROOT}/log/#{ENV['RAILS_ENV']}.log", 10, 1048576)
 
   # Use the database for sessions instead of the file system
   # (create the session table with 'rake db:sessions:create')
