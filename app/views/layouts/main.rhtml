@@ -3,7 +3,6 @@
 	<head>
 		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
 		<title>PCP :: Módulo de Gestão de Planejamento e Controle de Produção</title>
-		<link REL="SHORTCUT ICON" HREF="favicon.png">
 		<%= stylesheet_link_tag "essential", "pcp4erp", "pcp4erp_tabs", "custom", :media => "all" %>
 		<%= stylesheet_link_tag "/ext-3.4.0/examples/ux/fileuploadfield/css/fileuploadfield.css" %>
 		<%= javascript_include_tag :defaults %>
@@ -33,6 +32,24 @@
 		<div id="props-panel" style="width:200px;height:200px;overflow:hidden;"></div>
 		<div id="cadastros">
 			<ul>
+				<div
+				style="cursor:pointer;"
+				onMouseOver="setMouseOver(this, 'mnClientes')"
+				onMouseOut="setMouseOut(this, 'mnClientes')"
+				onclick="addNewTab('tab_clientes', 'Clientes','List', 'clientes', 'clientes-icon')">
+					<li>
+						<a id="mnClientes" href="#">Clientes</a>
+					</li>
+				</div>
+				<div
+				style="cursor:pointer;"
+				onMouseOver="setMouseOver(this, 'mnFuncionarios')"
+				onMouseOut="setMouseOut(this, 'mnFuncionarios)"
+				onclick="addNewTab('tab_funcionarios', 'Funcionarios','List', 'funcionarios', 'funcionarios-icon')">
+					<li>
+						<a id="mnClientes" href="#">Funcionarios</a>
+					</li>
+				</div>
 				<div
 				style="cursor:pointer;"
 				onMouseOver="setMouseOver(this, 'mnProdutos')"

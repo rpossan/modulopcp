@@ -1,0 +1,64 @@
+<script type="text/javascript">
+
+		var form_newFuncionarios = new Ext.FormPanel({
+			frame:true,
+			title: 'Crie novo funcionario conforme formulário abaixo',
+			bodyStyle:'padding:5px 5px 0',
+			style: "margin: 0px auto 0px auto;",
+			width: 520,
+			defaultType: 'textfield',
+			monitorValid: true,
+			items: [
+				{
+					xtype:"fieldset",
+					autoHeight: true,
+					defaults: {width: 350},
+					items: [
+						{ xtype:'textfield', fieldLabel: 'Nome', name: 'funcionario[nome]', allowBlank:false, maxLength: 50 },
+						{ xtype:'textfield', fieldLabel: 'RG', name: 'funcionario[rg]', allowBlank:false, maxLength: 100 },
+						{ xtype:'numberfield', fieldLabel: 'CPF', name: 'funcionario[cpf]', allowBlank: true, maxLength: 100 },
+						{ xtype:'textfield', fieldLabel: 'Telefone Residencial', name: 'funcionario[tel]', allowBlank: false, maxLength: 50 },
+						{ xtype:'numberfield', fieldLabel: 'Celular', name: 'funcionario[cel]', allowBlank: true, maxLength: 12 },
+						{ xtype:'textfield', fieldLabel: 'Endereço', name: 'funcionario[endereco]', allowBlank: true, maxLength: 50 },
+						{ xtype:'textfield', fieldLabel: 'Cidade', name: 'funcionario[cidade]', allowBlank: true, maxLength: 30 },
+						{ xtype:'textfield', fieldLabel: 'Estado', name: 'funcionario[estado]', allowBlank: true, maxLength: 30 },
+						{ xtype:'textfield', fieldLabel: 'Bairro', name: 'funcionario[bairro]', allowBlank: true, maxLength: 30 },
+						{ xtype:'textfield', fieldLabel: 'CEP', name: 'funcionario[cep]', allowBlank: true, maxLength: 30 },
+						{ xtype:'textfield', fieldLabel: 'Setor', name: 'funcionario[setor]', allowBlank: true, maxLength: 30 },
+						{ xtype:'textfield', fieldLabel: 'Turno', name: 'funcionario[turno]', allowBlank: true, maxLength: 30 }
+					]
+				}
+			],
+			buttons: [
+				{
+					text: 'Salvar',
+					handler:function(){
+						if(form_newFuncionarios.getForm().isValid()){
+							form_newFuncionarios.getForm().submit({
+								url:'<%= url_for (:controller => 'funcionarios', :action => 'create') %>',
+								waitMsg:'Saving Data...',
+								success: function(){
+									Ext.Msg.alert('OK','Funcionario cadastrado com sucesso!');
+									updateSubTab('tab_funcionarios','sub_tab_funcionarios','Funcionarios','<%= funcionarios_path %>');
+									closeSubTab('tab_funcionarios', 'sub_tab_funcionarios_new');
+									<%= params[:closealll] ?  "closeTab('tab_funcionarios');" : '' %>
+								},
+								failure: function(form, action){
+									if (action.failureType == 'server'){
+										msg = String(Ext.util.JSON.decode(action.response.responseText));
+										Ext.Msg.alert('Validation Error', msg);
+									} else {
+										Ext.Msg.alert('Error', 'There has been a problem while creating this request. Contact the system administrator.');
+									}
+								}
+							});
+						}
+					}
+				},
+				{text: 'Cancel', handler:function(){closeSubTab('tab_funcionarios','sub_tab_funcionarios_new');<%= params[:closealll] ?  "closeTab('tab_funcionarios');" : '' %>}}
+			]
+		});
+
+		form_newFuncionarios.render('area_form_newFuncionarios');
+</script>
+<br/><div id="area_form_newFuncionarios" style="float:left;margin-left:10px;"></div>

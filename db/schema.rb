@@ -9,7 +9,43 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111130150930) do
+ActiveRecord::Schema.define(:version => 20120208133523) do
+
+  create_table "clientes", :force => true do |t|
+    t.string   "nome"
+    t.string   "razao"
+    t.string   "contato"
+    t.string   "cnpj"
+    t.integer  "tel1"
+    t.integer  "tel2"
+    t.integer  "fax"
+    t.string   "email"
+    t.string   "site"
+    t.string   "endereco"
+    t.string   "bairro"
+    t.string   "estado"
+    t.string   "cidade"
+    t.string   "pais"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "funcionarios", :force => true do |t|
+    t.string   "nome"
+    t.string   "rg"
+    t.string   "cpf"
+    t.integer  "tel"
+    t.integer  "cel"
+    t.string   "endereco"
+    t.string   "cidade"
+    t.string   "estado"
+    t.string   "bairro"
+    t.integer  "cep"
+    t.string   "setor"
+    t.string   "turno"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "processos", :force => true do |t|
     t.string   "codigo"

@@ -1,0 +1,73 @@
+<script type="text/javascript">
+    var form_newFuncionarios_<%= @funcionario.id %> = new Ext.FormPanel
+	    ({
+	      frame:true,
+	      title: 'Editando funcionario <%= @funcionario.nome %>',
+	      bodyStyle:'padding:5px 5px 0',
+	      style: "margin: 0px auto 0px auto;",
+	      width: 520,
+	      defaultType: 'textfield',
+	      monitorValid: true,
+	      items: [{xtype:"fieldset",
+					 defaults: {width: 350},
+					autoHeight: true,
+                   	items:[
+						{ value: '<%= @funcionario.nome %>', xtype:'textfield', fieldLabel: 'Nome', name: 'funcionario[nome]', allowBlank:false, maxLength: 50 },
+						{ value: '<%= @funcionario.rg %>', xtype:'textfield', fieldLabel: 'RG', name: 'funcionario[rg]', allowBlank:false, maxLength: 100 },
+						{ value: '<%= @funcionario.cpf %>', xtype:'numberfield', fieldLabel: 'CPF', name: 'funcionario[cpf]', allowBlank: true, maxLength: 100 },
+						{ value: '<%= @funcionario.tel %>', xtype:'textfield', fieldLabel: 'Telefone Residencial', name: 'funcionario[tel]', allowBlank: false, maxLength: 50 },
+						{ value: '<%= @funcionario.cel %>', xtype:'numberfield', fieldLabel: 'Celular', name: 'funcionario[cel]', allowBlank: true, maxLength: 12 },
+						{ value: '<%= @funcionario.endereco %>', xtype:'textfield', fieldLabel: 'Endereço', name: 'funcionario[endereco]', allowBlank: true, maxLength: 50 },
+						{ value: '<%= @funcionario.cidade %>', xtype:'textfield', fieldLabel: 'Cidade', name: 'funcionario[cidade]', allowBlank: true, maxLength: 30 },
+						{ value: '<%= @funcionario.estado %>', xtype:'textfield', fieldLabel: 'Estado', name: 'funcionario[estado]', allowBlank: true, maxLength: 30 },
+						{ value: '<%= @funcionario.bairro %>', xtype:'textfield', fieldLabel: 'Bairro', name: 'funcionario[bairro]', allowBlank: true, maxLength: 30 },
+						{ value: '<%= @funcionario.cep %>', xtype:'textfield', fieldLabel: 'CEP', name: 'funcionario[cep]', allowBlank: true, maxLength: 30 },
+						{ value: '<%= @funcionario.setor %>', xtype:'textfield', fieldLabel: 'Setor', name: 'funcionario[setor]', allowBlank: true, maxLength: 30 },
+						{ value: '<%= @funcionario.turno %>', xtype:'textfield', fieldLabel: 'Turno', name: 'funcionario[turno]', allowBlank: true, maxLength: 30 }
+					]
+                 }
+                 ],
+			buttons: [
+      				{
+		      			text: 'Salvar',
+						handler:function(){
+		                   	if(form_newFuncionarios_<%= @funcionario.id %>.getForm().isValid()){
+								form_newFuncionarios_<%= @funcionario.id %>.getForm().submit({
+		                    		url:'/funcionarios/update/<%= @funcionario.id %>',
+		                           	waitMsg:'Saving Data...',
+		                           	success: function(){
+										Ext.Msg.alert('OK','Funcionario alterado com sucesso!');
+										updateSubTab('tab_funcionarios','sub_tab_funcionarios','Funcionarios','<%= funcionarios_path %>');
+										closeSubTab('tab_funcionarios','sub_tab_funcionarios_edit_<%= @funcionario.id %>');},
+									failure: function(form, action){
+										if (action.failureType == 'server'){
+											msg = String(Ext.util.JSON.decode(action.response.responseText));
+		                                   	Ext.Msg.alert('Validation Error', msg);
+	                                   	}
+		                               	else{
+		                               		Ext.Msg.alert('Error', 'There has been a problem while creating this request. Contact the system administrator.');
+	                               		}
+	                              	}
+	                         	});
+							}
+						}
+	                },
+	                {text: 'Cancel', handler:function(){closeSubTab('tab_funcionarios','sub_tab_funcionarios_edit_<%= @funcionario.id %>');}
+	               }
+			]
+	    });
+    form_newFuncionarios_<%= @funcionario.id %>.render( 'area_form_editFuncionarios_<%= @funcionario.id %>');
+</script>
+<br/>
+<div id="area_form_editFuncionarios_<%= @funcionario.id %>" style="float:left;margin-left:10px;"></div>
+<style>
+.x-grid3 {
+    background-color: #FFFFFF;
+    border: 1px solid #D0D0D0;
+}
+.x-fieldset {
+    padding: 0 10px 10px 10px;
+}
+.x-fieldset-bwrap {
+    margin-top: 10px;
+</style>

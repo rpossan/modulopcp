@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :funcionarios
+
+  map.resources :clientes
+
   map.resources :produto_processos
 
   map.resources :processos

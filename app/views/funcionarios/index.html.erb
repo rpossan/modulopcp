@@ -1,0 +1,94 @@
+<script type = "text/javascript">
+
+	function btnShow(value, metaData, record, rowIndex){
+		var ret =  '<div align="center">'+
+					'<a href="#" onclick="showFuncionario(' + rowIndex + ')">'+
+						'<img src="../images/show.png" title="Show" alt="Show" ></img>'+
+					'</a>'+
+				'</div>';
+		return ret;
+	}
+
+	function btnDelete(value, metaData, record, rowIndex, colIndex, store){
+		var ret =  '<div align="center">'+
+					'<a href="#" onclick="deleteFuncionario(' + rowIndex + ')">'+
+						'<img src="../images/Recycle_empty.png" title="Delete" alt="Delete" ></img>'+
+					'</a>'+
+				'</div>';
+		return ret;
+	}
+
+	function linkShow(value, metaData, record, rowIndex, colIndex, store){
+		return '<div><a href="#" onclick="editFuncionario(' + rowIndex + ')">' + value + '</a></div>';
+	}
+
+	function editFuncionario(idx){
+		var id = store_Funcionarios.getAt(idx).get('id');
+		var name = store_Funcionarios.getAt(idx).get('name');
+		addSubTab('tab_funcionarios', 'sub_tab_funcionarios_edit_'+id, 'Editing ' + name, '/funcionarios/edit/' + id, 'editIcon');
+	}
+
+	function deleteFuncionario(r){
+		var id = store_Funcionarios.getAt(r).get('id');
+		var name = store_Funcionarios.getAt(r).get('name');
+		Ext.Msg.confirm('Delete ', 'Confirm delete funcionario: ' + name, function(btn) {
+		    if (btn == 'yes') {
+				Ext.Ajax.request({
+		          url: 'funcionarios/destroy/'+id,
+		          success: function(result, req){
+		                var response = Ext.util.JSON.decode(result.responseText);
+						if(response.msg){
+				            Ext.Msg.alert('Warning', response.msg);
+			            }else{
+			      			updateSubTab('tab_funcionarios', 'sub_tab_funcionarios', 'List', '<%= funcionarios_path %>');
+			      			closeSubTab('tab_funcionarios', 'sub_tab_funcionarios_edit_' + id);
+			      			closeSubTab('tab_funcionarios', 'sub_tab_funcionarios_show_' + id);
+					    }
+		          },
+		          failure: function() {
+		            Ext.Msg.alert('Error','There was a problem while processing this request');
+		          }
+				});
+		    }
+		  });
+	}
+
+	function showFuncionario(r){
+		var id = store_Funcionarios.getAt(r).get('id');
+		var name = store_Funcionarios.getAt(r).get('name');
+		addSubTab('tab_funcionarios', 'sub_tab_funcionarios_show_'+id, 'Showing ' + name, '/funcionarios/show/' + id, 'showIcon');
+	}
+
+	function newFuncionario(){
+		addSubTab('tab_funcionarios', 'sub_tab_funcionarios_new', 'New funcionario', '<%= url_for(:action => "new") %>', 'newIcon');
+	}
+
+	var store_Funcionarios = createStore(
+		'<%= url_for(:controller => "funcionarios", :action => "store", :id => "grid") %>',
+		['id', 'nome', 'setor', 'turno'],
+		[{name: 'id'},{name: 'nome'},{name: 'setor'},{name: 'turno'}]
+	);
+
+	var pBar = createPBar(store_Funcionarios, 'funcionarios');
+
+	<%= include_buttons_funcionarios %>
+	var btnsFuncionarios = createFuncionariosBtns();
+	var cmdBar = createCmdBar(btnsFuncionarios);
+	var cols =
+		[
+       		{header: 'Nome', dataIndex: 'nome', sortable: true, renderer: linkShow},
+      		{header: 'Setor', dataIndex: 'setor', sortable: true},
+      		{header: 'Turno', dataIndex: 'turno', sortable: true},
+      		{id: 'edit', dataIndex: 'edit', renderer: btnShow},
+      		{id: 'delete', dataIndex: 'delete', renderer: btnDelete, width: 40}
+  		];
+
+  	var grid_Funcionarios = createGrid(store_Funcionarios, 'Lista de Funcionarios', cmdBar, pBar, cols);
+	store_Funcionarios.load({params: {start:0 , limit:10}});
+	grid_Funcionarios.render('funcionarios_index_grid_content');
+
+</script>
+
+<div id = "funcionarios_index_grid_content">
+  	<!-- AREA TO RENDER GRID  -->
+</div>

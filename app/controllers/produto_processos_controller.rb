@@ -1,15 +1,28 @@
 class ProdutoProcessosController < ApplicationController
   def store
+    lista = []
+    count = 0
     conditions = ""
     conditions =["nome LIKE ? OR codigo LIKE ?", "%#{params[:query]}%", "%#{params[:query]}%"] if params[:query].present?
-    produto_processos = ProdutoProcesso.all(
+    produtos = Produto.all(
         :conditions => conditions,
         :limit => params[:limit],
         :offset => params[:start],
-        :order => "id DESC"
+        :order => "nome"
     )
-    total = ProdutoProcesso.count(:conditions => conditions)
-    render(:json => {:success => true, :root => produto_processos, :totalCount => total})
+    produtos.each do |p|
+      if p.produto_processos.size > 0
+        count += 1
+        lista <<
+        {
+          :id => p.id,
+          :produto => p.nome,
+          :processos => p.produto_processos.size,
+          :atualizado => ProdutoProcesso.last(:conditions => ["produto_id = ?", p.id], :order => "created_at ASC").created_at.strftime("%d/%m/%Y - %H:%M:%S")
+        }
+      end
+    end
+    render(:json => {:success => true, :root => lista, :totalCount => count})
   end
 
   # GET /produto_processos
@@ -53,15 +66,14 @@ class ProdutoProcessosController < ApplicationController
   # POST /produto_processos
   # POST /produto_processos.xml
   def create
-    @produto_processo = ProdutoProcesso.new(params[:produto_processo])
-
+    processos = ActiveSupport::JSON.decode(params[:produto_processos]) if params[:produto_processos]
     respond_to do |format|
-      if @produto_processo.save
-        format.html { redirect_to(@produto_processo, :notice => 'ProdutoProcesso was successfully created.') }
-        format.xml  { render :xml => @produto_processo, :status => :created, :location => @produto_processo }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @produto_processo.errors, :status => :unprocessable_entity }
+      if processos
+        produto = Produto.find(params[:produto_processo]["produto_id"]) if params[:produto_processo]
+        processos.each do |p|
+          processo = ProdutoProcesso.create(:produto_id => produto.id, :processo_id => p["id"], :tempo_padrao => p["tempo_padrao"], :producao_hora => p["producao_hora"])
+        end
+        format.html { render :json => {:success => true} }
       end
     end
   end

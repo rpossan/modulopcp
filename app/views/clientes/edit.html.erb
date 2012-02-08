@@ -1,0 +1,75 @@
+<script type="text/javascript">
+    var form_newClientes_<%= @cliente.id %> = new Ext.FormPanel
+	    ({
+	      frame:true,
+	      title: 'Editando cliente <%= @cliente.nome %>',
+	      bodyStyle:'padding:5px 5px 0',
+	      style: "margin: 0px auto 0px auto;",
+	      width: 520,
+	      defaultType: 'textfield',
+	      monitorValid: true,
+	      items: [{xtype:"fieldset",
+					 defaults: {width: 350},
+					autoHeight: true,
+                   	items:[
+						{ value: '<%= @cliente.nome %>', xtype:'textfield', fieldLabel: 'Nome', name: 'cliente[nome]', allowBlank:false, maxLength: 50 },
+						{ value: '<%= @cliente.razao %>', xtype:'textfield', fieldLabel: 'Razão Social', name: 'cliente[razao]', allowBlank:false, maxLength: 100 },
+						{ value: '<%= @cliente.contato %>', xtype:'textfield', fieldLabel: 'Contato', name: 'cliente[contato]', allowBlank: true, maxLength: 100 },
+						{ value: '<%= @cliente.cnpj %>', xtype:'textfield', fieldLabel: 'CNPJ', name: 'cliente[cnpj]', allowBlank: false, maxLength: 50 },
+						{ value: '<%= @cliente.tel1 %>', xtype:'numberfield', fieldLabel: 'Telefone1', name: 'cliente[tel1]', allowBlank: true, maxLength: 12 },
+						{ value: '<%= @cliente.tel2 %>', xtype:'numberfield', fieldLabel: 'Telefone2', name: 'cliente[tel2]', allowBlank: true, maxLength: 12 },
+						{ value: '<%= @cliente.fax %>', xtype:'numberfield', fieldLabel: 'Fax', name: 'cliente[fax]', allowBlank: true, maxLength: 12 },
+						{ value: '<%= @cliente.email %>', xtype:'textfield', fieldLabel: 'E-mail', name: 'cliente[email]', allowBlank: true, maxLength: 20 },
+						{ value: '<%= @cliente.site %>', xtype:'textfield', fieldLabel: 'Site', name: 'cliente[site]', allowBlank: true, maxLength: 20 },
+						{ value: '<%= @cliente.endereco %>', xtype:'textfield', fieldLabel: 'Endereço', name: 'cliente[endereco]', allowBlank: true, maxLength: 50 },
+						{ value: '<%= @cliente.cidade %>', xtype:'textfield', fieldLabel: 'Cidade', name: 'cliente[cidade]', allowBlank: true, maxLength: 30 },
+						{ value: '<%= @cliente.estado %>', xtype:'textfield', fieldLabel: 'Estado', name: 'cliente[estado]', allowBlank: true, maxLength: 30 },
+						{ value: '<%= @cliente.bairro %>', xtype:'textfield', fieldLabel: 'Bairro', name: 'cliente[bairro]', allowBlank: true, maxLength: 30 },
+						{ value: '<%= @cliente.pais %>', xtype:'textfield', fieldLabel: 'País', name: 'cliente[pais]', allowBlank: true, maxLength: 30 }
+					]
+                 }
+                 ],
+			buttons: [
+      				{
+		      			text: 'Salvar',
+						handler:function(){
+		                   	if(form_newClientes_<%= @cliente.id %>.getForm().isValid()){
+								form_newClientes_<%= @cliente.id %>.getForm().submit({
+		                    		url:'/clientes/update/<%= @cliente.id %>',
+		                           	waitMsg:'Saving Data...',
+		                           	success: function(){
+										Ext.Msg.alert('OK','Cliente alterado com sucesso!');
+										updateSubTab('tab_clientes','sub_tab_clientes','Clientes','<%= clientes_path %>');
+										closeSubTab('tab_clientes','sub_tab_clientes_edit_<%= @cliente.id %>');},
+									failure: function(form, action){
+										if (action.failureType == 'server'){
+											msg = String(Ext.util.JSON.decode(action.response.responseText));
+		                                   	Ext.Msg.alert('Validation Error', msg);
+	                                   	}
+		                               	else{
+		                               		Ext.Msg.alert('Error', 'There has been a problem while creating this request. Contact the system administrator.');
+	                               		}
+	                              	}
+	                         	});
+							}
+						}
+	                },
+	                {text: 'Cancel', handler:function(){closeSubTab('tab_clientes','sub_tab_clientes_edit_<%= @cliente.id %>');}
+	               }
+			]
+	    });
+    form_newClientes_<%= @cliente.id %>.render( 'area_form_editClientes_<%= @cliente.id %>');
+</script>
+<br/>
+<div id="area_form_editClientes_<%= @cliente.id %>" style="float:left;margin-left:10px;"></div>
+<style>
+.x-grid3 {
+    background-color: #FFFFFF;
+    border: 1px solid #D0D0D0;
+}
+.x-fieldset {
+    padding: 0 10px 10px 10px;
+}
+.x-fieldset-bwrap {
+    margin-top: 10px;
+</style>

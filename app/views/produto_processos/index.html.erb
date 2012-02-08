@@ -66,7 +66,7 @@
 	var store_ProdutoProcessos = createStore(
 		'<%= url_for(:controller => "produto_processos", :action => "store", :id => "grid") %>',
 		['id', 'produto_id', 'processo_id'],
-		[{name: 'id'},{name: 'produto_id'},{name: 'processo_id'}]
+		[{name: 'id'},{name: 'produto'},{name: 'processos'},{name: 'atualizado'}]
 	);
 
 	var pBar = createPBar(store_ProdutoProcessos, 'produto_processos');
@@ -76,8 +76,9 @@
 	var cmdBar = createCmdBar(btnsProdutoProcessos);
 	var cols =
 		[
-       		{header: 'Produto', dataIndex: 'produto_id', sortable: true, renderer: linkShow, width: 220},
-      		{header: 'Processo', dataIndex: 'processo_id', sortable: true, width: 220},
+       		{header: 'Produto', dataIndex: 'produto', sortable: true, renderer: linkShow, width: 220},
+      		{header: 'Processos', dataIndex: 'processos', sortable: true, width: 100},
+      		{header: 'Atualizado em', dataIndex: 'atualizado', sortable: true, width: 220},
       		{id: 'edit', dataIndex: 'edit', renderer: btnShow, width: 40},
       		{id: 'delete', dataIndex: 'delete', renderer: btnDelete, width: 40}
   		];

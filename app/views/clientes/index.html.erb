@@ -1,0 +1,98 @@
+<script type = "text/javascript">
+
+	function btnShow(value, metaData, record, rowIndex){
+		var ret =  '<div align="center">'+
+					'<a href="#" onclick="showCliente(' + rowIndex + ')">'+
+						'<img src="../images/show.png" title="Show" alt="Show" ></img>'+
+					'</a>'+
+				'</div>';
+		return ret;
+	}
+
+	function btnDelete(value, metaData, record, rowIndex, colIndex, store){
+		var ret =  '<div align="center">'+
+					'<a href="#" onclick="deleteCliente(' + rowIndex + ')">'+
+						'<img src="../images/Recycle_empty.png" title="Delete" alt="Delete" ></img>'+
+					'</a>'+
+				'</div>';
+		return ret;
+	}
+
+	function linkShow(value, metaData, record, rowIndex, colIndex, store){
+		return '<div><a href="#" onclick="editCliente(' + rowIndex + ')">' + value + '</a></div>';
+	}
+
+	function editCliente(idx){
+		var id = store_Clientes.getAt(idx).get('id');
+		var name = store_Clientes.getAt(idx).get('name');
+		addSubTab('tab_clientes', 'sub_tab_clientes_edit_'+id, 'Editing ' + name, '/clientes/edit/' + id, 'editIcon');
+	}
+
+	function deleteCliente(r){
+		var id = store_Clientes.getAt(r).get('id');
+		var name = store_Clientes.getAt(r).get('name');
+		Ext.Msg.confirm('Delete ', 'Confirm delete cliente: ' + name, function(btn) {
+		    if (btn == 'yes') {
+				Ext.Ajax.request({
+		          url: 'clientes/destroy/'+id,
+		          success: function(result, req){
+		                var response = Ext.util.JSON.decode(result.responseText);
+						if(response.msg){
+				            Ext.Msg.alert('Warning', response.msg);
+			            }else{
+			      			updateSubTab('tab_clientes', 'sub_tab_clientes', 'List', '<%= clientes_path %>');
+			      			closeSubTab('tab_clientes', 'sub_tab_clientes_edit_' + id);
+			      			closeSubTab('tab_clientes', 'sub_tab_clientes_show_' + id);
+					    }
+		          },
+		          failure: function() {
+		            Ext.Msg.alert('Error','There was a problem while processing this request');
+		          }
+				});
+		    }
+		  });
+	}
+
+	function showCliente(r){
+		var id = store_Clientes.getAt(r).get('id');
+		var name = store_Clientes.getAt(r).get('name');
+		addSubTab('tab_clientes', 'sub_tab_clientes_show_'+id, 'Showing ' + name, '/clientes/show/' + id, 'showIcon');
+	}
+
+	function newCliente(){
+		addSubTab('tab_clientes', 'sub_tab_clientes_new', 'New cliente', '<%= url_for(:action => "new") %>', 'newIcon');
+	}
+
+	var store_Clientes = createStore(
+		'<%= url_for(:controller => "clientes", :action => "store", :id => "grid") %>',
+		['id', 'nome', 'razao', 'cnpj', 'email', 'telefone', 'cidade', 'estado'],
+		[{name: 'id'},{name: 'nome'},{name: 'razao'},{name: 'cnpj'},{name: 'email'},{name: 'telefone'},{name: 'cidade'},{name: 'estado'}]
+	);
+
+	var pBar = createPBar(store_Clientes, 'clientes');
+
+	<%= include_buttons_clientes %>
+	var btnsClientes = createClientesBtns();
+	var cmdBar = createCmdBar(btnsClientes);
+	var cols =
+		[
+       		{header: 'Nome', dataIndex: 'nome', sortable: true, renderer: linkShow},
+      		{header: 'Razão', dataIndex: 'razao', sortable: true},
+      		{header: 'CNPJ', dataIndex: 'cnpj', sortable: true},
+      		{header: 'E-mail', dataIndex: 'email', sortable: true},
+      		{header: 'Telefone', dataIndex: 'telefone', sortable: true},
+      		{header: 'Cidade', dataIndex: 'cidade', sortable: true},
+      		{header: 'Estado', dataIndex: 'estado', sortable: true},
+      		{id: 'edit', dataIndex: 'edit', renderer: btnShow},
+      		{id: 'delete', dataIndex: 'delete', renderer: btnDelete, width: 40}
+  		];
+
+  	var grid_Clientes = createGrid(store_Clientes, 'Lista de Clientes', cmdBar, pBar, cols);
+	store_Clientes.load({params: {start:0 , limit:10}});
+	grid_Clientes.render('clientes_index_grid_content');
+
+</script>
+
+<div id = "clientes_index_grid_content">
+  	<!-- AREA TO RENDER GRID  -->
+</div>
