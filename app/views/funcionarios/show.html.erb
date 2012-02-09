@@ -1,63 +1,60 @@
-<p>
-  <b>Nome:</b>
-  <%=h @funcionario.nome %>
-</p>
+	<p>
+	  <b>Nome:</b>
+	  <%=h @funcionario.nome %>
+	</p>
 
-<p>
-  <b>Rg:</b>
-  <%=h @funcionario.rg %>
-</p>
+	<p>
+	  <b>Rg:</b>
+	  <%=h @funcionario.rg %>
+	</p>
 
-<p>
-  <b>Cpf:</b>
-  <%=h @funcionario.cpf %>
-</p>
+	<p>
+	  <b>Cpf:</b>
+	  <%=h @funcionario.cpf %>
+	</p>
 
-<p>
-  <b>Tel:</b>
-  <%=h @funcionario.tel %>
-</p>
+	<p>
+	  <b>Tel:</b>
+	  <%=h @funcionario.tel %>
+	</p>
 
-<p>
-  <b>Cel:</b>
-  <%=h @funcionario.cel %>
-</p>
+	<p>
+	  <b>Cel:</b>
+	  <%=h @funcionario.cel %>
+	</p>
 
-<p>
-  <b>Endereco:</b>
-  <%=h @funcionario.endereco %>
-</p>
+	<p>
+	  <b>Endereco:</b>
+	  <%=h @funcionario.endereco %>
+	</p>
 
-<p>
-  <b>Cidade:</b>
-  <%=h @funcionario.cidade %>
-</p>
+	<p>
+	  <b>Cidade:</b>
+	  <%=h @funcionario.cidade %>
+	</p>
 
-<p>
-  <b>Estado:</b>
-  <%=h @funcionario.estado %>
-</p>
+	<p>
+	  <b>Estado:</b>
+	  <%=h @funcionario.estado %>
+	</p>
 
-<p>
-  <b>Bairro:</b>
-  <%=h @funcionario.bairro %>
-</p>
+	<p>
+	  <b>Bairro:</b>
+	  <%=h @funcionario.bairro %>
+	</p>
 
-<p>
-  <b>Cep:</b>
-  <%=h @funcionario.cep %>
-</p>
+	<p>
+	  <b>Cep:</b>
+	  <%=h @funcionario.cep %>
+	</p>
 
-<p>
-  <b>Setor:</b>
-  <%=h @funcionario.setor %>
-</p>
+	<p>
+	  <b>Setor:</b>
+	  <%=h @funcionario.setor %>
+	</p>
 
-<p>
-  <b>Turno:</b>
-  <%=h @funcionario.turno %>
-</p>
-
-
-<%= link_to 'Edit', edit_funcionario_path(@funcionario) %> |
-<%= link_to 'Back', funcionarios_path %>
+	<p>
+	  <b>Turno:</b>
+	  <%=h @funcionario.turno %>
+	</p>
+	<%= image_tag("uploaded_pics/#{@funcionario.foto}", :width=> 200) %>

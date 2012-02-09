@@ -13421,3 +13421,3372 @@ Processing FuncionariosController#edit (for 127.0.0.1 at 2012-02-08 16:47:25) [G
 Rendering template within layouts/funcionarios
 Rendering funcionarios/edit
 Completed in 19ms (View: 4, DB: 3) | 200 OK [http://localhost/funcionarios/edit/1]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2012-02-09 16:34:49) [GET]
+  [4;35;1mUser Load (22.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" IS NULL) LIMIT 1[0m
+Redirected to http://localhost:3000/login/login
+Filter chain halted as [:authorize] rendered_or_redirected.
+Completed in 431ms (DB: 78) | 302 Found [http://localhost/pcp]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LoginController#login (for 127.0.0.1 at 2012-02-09 16:34:49) [GET]
+Rendering login/login
+Completed in 95ms (View: 89, DB: 3) | 200 OK [http://localhost/login/login]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:34:50) [GET]
+
+ActionController::RoutingError (No route matches "/images/pcp4erp_logo.gif" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LoginController#login (for 127.0.0.1 at 2012-02-09 16:34:51) [POST]
+  Parameters: {"commit"=>"Login", "login"=>"admin", "password"=>"admin"}
+  [4;35;1mUser Load (17.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."login" = 'admin') LIMIT 1[0m
+Redirected to http://localhost:3000/pcp
+Completed in 35ms (DB: 20) | 302 Found [http://localhost/login/login]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2012-02-09 16:34:51) [GET]
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/main
+Rendering login/index
+Completed in 183ms (View: 119, DB: 4) | 200 OK [http://localhost/pcp]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (2.7ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:34:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:34:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:34:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:34:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:34:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:34:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:34:55) [GET]
+
+ActionController::RoutingError (No route matches "/images/index_tabs.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 16:34:55) [GET]
+  [4;35;1mFuncionario Load (42.8ms)[0m   [0mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 175ms (View: 106, DB: 45) | 200 OK [http://localhost/funcionarios]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 16:34:55) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328812495580", "limit"=>"10"}
+  [4;35;1mFuncionario Load (2.0ms)[0m   [0mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (36.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 99ms (View: 5, DB: 39) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328812495580&start=0&limit=10]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 16:34:57) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mFuncionario Load (1.6ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 1) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 59ms (View: 44, DB: 4) | 200 OK [http://localhost/funcionarios/show/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#edit (for 127.0.0.1 at 2012-02-09 16:34:59) [GET]
+  Parameters: {"id"=>"1"}
+  [4;36;1mFuncionario Load (1.1ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 1) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/edit
+Completed in 45ms (View: 30, DB: 4) | 200 OK [http://localhost/funcionarios/edit/1]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProcessosController#index (for 127.0.0.1 at 2012-02-09 16:35:08) [GET]
+  [4;36;1mProcesso Load (39.4ms)[0m   [0;1mSELECT * FROM "processos" [0m
+Rendering template within layouts/processos
+Rendering processos/index
+Completed in 118ms (View: 41, DB: 42) | 200 OK [http://localhost/processos]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProcessosController#store (for 127.0.0.1 at 2012-02-09 16:35:09) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328812509040", "limit"=>"10"}
+  [4;36;1mProcesso Load (1.9ms)[0m   [0;1mSELECT * FROM "processos" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "processos" [0m
+Completed in 17ms (View: 4, DB: 3) | 200 OK [http://localhost/processos/store/grid?_dc=1328812509040&start=0&limit=10]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProdutoProcessosController#index (for 127.0.0.1 at 2012-02-09 16:35:14) [GET]
+  [4;35;1mProdutoProcesso Load (18.1ms)[0m   [0mSELECT * FROM "produto_processos" [0m
+Rendering template within layouts/produto_processos
+Rendering produto_processos/index
+Completed in 165ms (View: 105, DB: 52) | 200 OK [http://localhost/produto_processos]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProdutoProcessosController#store (for 127.0.0.1 at 2012-02-09 16:35:15) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328812515203", "limit"=>"10"}
+  [4;35;1mProduto Load (21.8ms)[0m   [0mSELECT * FROM "produtos" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSELECT count(*) AS count_all FROM "produto_processos" WHERE ("produto_processos".produto_id = 2) [0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSELECT count(*) AS count_all FROM "produto_processos" WHERE ("produto_processos".produto_id = 1) [0m
+  [4;36;1mCACHE (0.0ms)[0m   [0;1mSELECT count(*) AS count_all FROM "produto_processos" WHERE ("produto_processos".produto_id = 1) [0m
+  [4;35;1mProdutoProcesso Load (0.7ms)[0m   [0mSELECT * FROM "produto_processos" WHERE (produto_id = 1) ORDER BY created_at DESC LIMIT 1[0m
+Completed in 132ms (View: 1, DB: 24) | 200 OK [http://localhost/produto_processos/store/grid?_dc=1328812515203&start=0&limit=10]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2012-02-09 16:48:34) [GET]
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/main
+Rendering login/index
+Completed in 45ms (View: 19, DB: 3) | 200 OK [http://localhost/pcp]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:48:34) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:48:34) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:48:34) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:48:35) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:48:35) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:48:35) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:48:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/index_tabs.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 16:48:38) [GET]
+  [4;35;1mFuncionario Load (1.3ms)[0m   [0mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 27ms (View: 16, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 16:48:38) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328813318631", "limit"=>"10"}
+  [4;35;1mFuncionario Load (2.9ms)[0m   [0mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 57ms (View: 4, DB: 5) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328813318631&start=0&limit=10]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2012-02-09 16:48:46) [GET]
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/main
+Rendering login/index
+Completed in 22ms (View: 5, DB: 4) | 200 OK [http://localhost/pcp]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:48:46) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:48:46) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:48:46) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:48:46) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:48:46) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:48:47) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2012-02-09 16:49:29) [GET]
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/main
+Rendering login/index
+Completed in 28ms (View: 11, DB: 4) | 200 OK [http://localhost/pcp]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:49:29) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:49:29) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:49:29) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (3.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:49:30) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/file_control.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:49:30) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:49:30) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:49:30) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:49:30) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/file_control.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2012-02-09 16:50:25) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/main
+Rendering login/index
+Completed in 27ms (View: 11, DB: 4) | 200 OK [http://localhost/pcp]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:50:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:50:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:50:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:50:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/file_control.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:50:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:50:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:50:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:50:26) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/file_control.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:50:29) [GET]
+
+ActionController::RoutingError (No route matches "/images/index_tabs.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 16:50:29) [GET]
+  [4;36;1mFuncionario Load (1.4ms)[0m   [0;1mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 13ms (View: 3, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 16:50:29) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328813429754", "limit"=>"10"}
+  [4;36;1mFuncionario Load (2.0ms)[0m   [0;1mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (1.7ms)[0m   [0mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 25ms (View: 4, DB: 4) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328813429754&start=0&limit=10]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#new (for 127.0.0.1 at 2012-02-09 16:50:31) [GET]
+Rendering template within layouts/funcionarios
+Rendering funcionarios/new
+Completed in 21ms (View: 9, DB: 2) | 200 OK [http://localhost/funcionarios/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2012-02-09 16:57:25) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/main
+Rendering login/index
+Completed in 24ms (View: 5, DB: 4) | 200 OK [http://localhost/pcp]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:57:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:57:25) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:57:26) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:57:26) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/file_control.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:57:26) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:57:26) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:57:26) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:57:26) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/file_control.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 16:57:27) [GET]
+
+ActionController::RoutingError (No route matches "/images/index_tabs.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 16:57:27) [GET]
+  [4;36;1mFuncionario Load (1.3ms)[0m   [0;1mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 15ms (View: 3, DB: 5) | 200 OK [http://localhost/funcionarios]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 16:57:28) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328813847854", "limit"=>"10"}
+  [4;36;1mFuncionario Load (5.2ms)[0m   [0;1mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 31ms (View: 5, DB: 6) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328813847854&start=0&limit=10]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#new (for 127.0.0.1 at 2012-02-09 16:57:28) [GET]
+Rendering template within layouts/funcionarios
+Rendering funcionarios/new
+Completed in 17ms (View: 3, DB: 2) | 200 OK [http://localhost/funcionarios/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2012-02-09 17:00:16) [GET]
+  [4;36;1mUser Load (0.9ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/main
+Rendering login/index
+Completed in 29ms (View: 5, DB: 4) | 200 OK [http://localhost/pcp]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:00:16) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:00:16) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:00:17) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:00:17) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:00:17) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:00:17) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:00:18) [GET]
+
+ActionController::RoutingError (No route matches "/images/index_tabs.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.6ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:00:19) [GET]
+  [4;36;1mFuncionario Load (1.5ms)[0m   [0;1mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 14ms (View: 3, DB: 5) | 200 OK [http://localhost/funcionarios]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:00:19) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328814019247", "limit"=>"10"}
+  [4;36;1mFuncionario Load (2.3ms)[0m   [0;1mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 23ms (View: 4, DB: 4) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328814019247&start=0&limit=10]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#new (for 127.0.0.1 at 2012-02-09 17:00:20) [GET]
+Rendering template within layouts/funcionarios
+Rendering funcionarios/new
+Completed in 14ms (View: 2, DB: 2) | 200 OK [http://localhost/funcionarios/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2012-02-09 17:26:49) [GET]
+  [4;35;1mUser Load (1.2ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/main
+Rendering login/index
+Completed in 713ms (View: 286, DB: 4) | 200 OK [http://localhost/pcp]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:26:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:26:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:26:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:26:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:26:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:26:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:26:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/index_tabs.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:26:53) [GET]
+  [4;35;1mFuncionario Load (27.3ms)[0m   [0mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 94ms (View: 47, DB: 31) | 200 OK [http://localhost/funcionarios]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:26:54) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328815613946", "limit"=>"10"}
+  [4;35;1mFuncionario Load (2.2ms)[0m   [0mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (16.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 53ms (View: 9, DB: 19) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328815613946&start=0&limit=10]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#new (for 127.0.0.1 at 2012-02-09 17:26:55) [GET]
+Rendering template within layouts/funcionarios
+Rendering funcionarios/new
+Completed in 82ms (View: 70, DB: 2) | 200 OK [http://localhost/funcionarios/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+  [4;35;1mSQL (9.7ms)[0m   [0mSELECT version FROM schema_migrations[0m
+Migrating to CreateSessions (20110428170710)
+Migrating to CreateUsers (20110905170614)
+Migrating to CreateProdutos (20111130130628)
+Migrating to CreateProcessos (20111130144654)
+Migrating to CreateProdutoProcessos (20111130150930)
+Migrating to CreateClientes (20120208123715)
+Migrating to CreateFuncionarios (20120208133523)
+Migrating to AddFoto (20120209190928)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (226.9ms)[0m   [0mALTER TABLE "funcionarios" ADD COLUMN "foto" character varying(255)[0m
+  [4;36;1mSQL (23.2ms)[0m   [0;1mINSERT INTO schema_migrations (version) VALUES ('20120209190928')[0m
+  [4;35;1mSQL (58.1ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSELECT version FROM schema_migrations[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#create (for 127.0.0.1 at 2012-02-09 17:27:48) [POST]
+  Parameters: {"funcionario"=>{"endereco"=>"", "cep"=>"", "cpf"=>"", "nome"=>"Nardao", "setor"=>"", "tel"=>"121212", "bairro"=>"", "estado"=>"", "cidade"=>"", "turno"=>"", "cel"=>"", "rg"=>"1212"}}
+  [4;35;1mSQL (0.2ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (36.3ms)[0m   [0;1mINSERT INTO "funcionarios" ("endereco", "created_at", "nome", "cpf", "cep", "updated_at", "tel", "setor", "foto", "bairro", "cidade", "estado", "turno", "rg", "cel") VALUES('', '2012-02-09 17:27:48.766013', 'Nardao', '', NULL, '2012-02-09 17:27:48.766013', 121212, '', NULL, '', '', '', '', '1212', NULL) RETURNING "id"[0m
+  [4;35;1mSQL (33.6ms)[0m   [0mCOMMIT[0m
+Completed in 97ms (View: 6, DB: 71) | 200 OK [http://localhost/funcionarios]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:27:49) [GET]
+  [4;35;1mFuncionario Load (1.4ms)[0m   [0mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 35ms (View: 26, DB: 3) | 200 OK [http://localhost/funcionarios]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:27:49) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328815669276", "limit"=>"10"}
+  [4;35;1mFuncionario Load (2.0ms)[0m   [0mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 18ms (View: 5, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328815669276&start=0&limit=10]
+  [4;35;1mSQL (0.5ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#new (for 127.0.0.1 at 2012-02-09 17:28:37) [GET]
+Rendering template within layouts/funcionarios
+Rendering funcionarios/new
+Completed in 22ms (View: 9, DB: 2) | 200 OK [http://localhost/funcionarios/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#create (for 127.0.0.1 at 2012-02-09 17:28:48) [POST]
+  Parameters: {"funcionario"=>{"endereco"=>"", "cep"=>"", "cpf"=>"223", "nome"=>"asas", "setor"=>"", "tel"=>"232323", "bairro"=>"", "estado"=>"", "cidade"=>"", "turno"=>"", "cel"=>"", "rg"=>"asa"}}
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mINSERT INTO "funcionarios" ("endereco", "created_at", "nome", "cpf", "cep", "updated_at", "tel", "setor", "foto", "bairro", "cidade", "estado", "turno", "rg", "cel") VALUES('', '2012-02-09 17:28:48.453774', 'asas', '223', NULL, '2012-02-09 17:28:48.453774', 232323, '', NULL, '', '', '', '', 'asa', NULL) RETURNING "id"[0m
+  [4;35;1mSQL (73.8ms)[0m   [0mCOMMIT[0m
+Completed in 99ms (View: 1, DB: 76) | 200 OK [http://localhost/funcionarios]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:28:48) [GET]
+  [4;35;1mFuncionario Load (1.4ms)[0m   [0mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 12ms (View: 2, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:28:49) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328815728918", "limit"=>"10"}
+  [4;35;1mFuncionario Load (2.0ms)[0m   [0mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 19ms (View: 6, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328815728918&start=0&limit=10]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#new (for 127.0.0.1 at 2012-02-09 17:29:41) [GET]
+Rendering template within layouts/funcionarios
+Rendering funcionarios/new
+Completed in 20ms (View: 8, DB: 2) | 200 OK [http://localhost/funcionarios/new]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#destroy (for 127.0.0.1 at 2012-02-09 17:29:45) [GET]
+  Parameters: {"id"=>"3", "_dc"=>"1328815785436"}
+  [4;35;1mFuncionario Load (0.9ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 3) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFuncionario Destroy (0.4ms)[0m   [0mDELETE FROM "funcionarios" WHERE "id" = 3[0m
+  [4;36;1mSQL (30.5ms)[0m   [0;1mCOMMIT[0m
+Completed in 46ms (View: 1, DB: 32) | 200 OK [http://localhost/funcionarios/destroy/3?_dc=1328815785436]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:29:45) [GET]
+  [4;36;1mFuncionario Load (1.4ms)[0m   [0;1mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 12ms (View: 3, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:29:45) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328815785731", "limit"=>"10"}
+  [4;36;1mFuncionario Load (2.1ms)[0m   [0;1mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 18ms (View: 5, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328815785731&start=0&limit=10]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#destroy (for 127.0.0.1 at 2012-02-09 17:29:47) [GET]
+  Parameters: {"id"=>"2", "_dc"=>"1328815787887"}
+  [4;35;1mFuncionario Load (1.0ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 2) [0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFuncionario Destroy (0.4ms)[0m   [0mDELETE FROM "funcionarios" WHERE "id" = 2[0m
+  [4;36;1mSQL (21.9ms)[0m   [0;1mCOMMIT[0m
+Completed in 92ms (View: 1, DB: 24) | 200 OK [http://localhost/funcionarios/destroy/2?_dc=1328815787887]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:29:48) [GET]
+  [4;36;1mFuncionario Load (1.3ms)[0m   [0;1mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 12ms (View: 3, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:29:48) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328815788176", "limit"=>"10"}
+  [4;36;1mFuncionario Load (1.9ms)[0m   [0;1mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 19ms (View: 5, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328815788176&start=0&limit=10]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#new (for 127.0.0.1 at 2012-02-09 17:29:48) [GET]
+Rendering template within layouts/funcionarios
+Rendering funcionarios/new
+Completed in 14ms (View: 2, DB: 2) | 200 OK [http://localhost/funcionarios/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2012-02-09 17:29:51) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mUser Load (0.5ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/main
+Rendering login/index
+Completed in 34ms (View: 16, DB: 4) | 200 OK [http://localhost/pcp]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:29:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:29:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:29:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:29:53) [GET]
+
+ActionController::RoutingError (No route matches "/images/index_tabs.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:29:53) [GET]
+  [4;35;1mFuncionario Load (1.5ms)[0m   [0mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 14ms (View: 3, DB: 5) | 200 OK [http://localhost/funcionarios]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:29:54) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328815793883", "limit"=>"10"}
+  [4;35;1mFuncionario Load (2.2ms)[0m   [0mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 28ms (View: 5, DB: 4) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328815793883&start=0&limit=10]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#new (for 127.0.0.1 at 2012-02-09 17:29:54) [GET]
+Rendering template within layouts/funcionarios
+Rendering funcionarios/new
+Completed in 14ms (View: 2, DB: 2) | 200 OK [http://localhost/funcionarios/new]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#create (for 127.0.0.1 at 2012-02-09 17:30:11) [POST]
+  Parameters: {"funcionario"=>{"endereco"=>"", "cep"=>"", "cpf"=>"123456", "nome"=>"Nardao", "setor"=>"", "tel"=>"121212", "bairro"=>"", "estado"=>"", "cidade"=>"", "turno"=>"", "cel"=>"", "rg"=>"123456"}, "foto"=>#<File:/tmp/RackMultipart20120209-9846-a13lob-0>}
+
+NoMethodError (You have a nil object when you didn't expect it!
+You might have expected an instance of ActiveRecord::Base.
+The error occurred while evaluating nil.save):
+  app/controllers/funcionarios_controller.rb:62:in `create'
+
+Rendered rescues/_trace (80.9ms)
+Rendered rescues/_request_and_response (21.3ms)
+Rendering rescues/layout (internal_server_error)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#create (for 127.0.0.1 at 2012-02-09 17:30:40) [POST]
+  Parameters: {"funcionario"=>{"endereco"=>"", "cep"=>"", "cpf"=>"123456", "nome"=>"Nardao", "setor"=>"", "tel"=>"121212", "bairro"=>"", "estado"=>"", "cidade"=>"", "turno"=>"", "cel"=>"", "rg"=>"123456"}, "foto"=>#<File:/tmp/RackMultipart20120209-9846-ktcde-0>}
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mINSERT INTO "funcionarios" ("endereco", "created_at", "nome", "cpf", "cep", "updated_at", "tel", "setor", "foto", "bairro", "cidade", "estado", "turno", "rg", "cel") VALUES('', '2012-02-09 17:30:40.025346', 'Nardao', '123456', NULL, '2012-02-09 17:30:40.025346', 121212, '', NULL, '', '', '', '', '123456', NULL) RETURNING "id"[0m
+  [4;36;1mSQL (43.8ms)[0m   [0;1mCOMMIT[0m
+
+Errno::ENOENT (No such file or directory - /home/ronaldo/projects/pcp4erp/public/images/uploaded_pics/4_IMGP2816.JPG):
+  /usr/lib/ruby/1.8/fileutils.rb:1263:in `initialize'
+  /usr/lib/ruby/1.8/fileutils.rb:1263:in `open'
+  /usr/lib/ruby/1.8/fileutils.rb:1263:in `copy_file'
+  /usr/lib/ruby/1.8/fileutils.rb:1262:in `open'
+  /usr/lib/ruby/1.8/fileutils.rb:1262:in `copy_file'
+  /usr/lib/ruby/1.8/fileutils.rb:463:in `copy_file'
+  /usr/lib/ruby/1.8/fileutils.rb:383:in `copy'
+  /usr/lib/ruby/1.8/fileutils.rb:1396:in `fu_each_src_dest'
+  /usr/lib/ruby/1.8/fileutils.rb:1412:in `fu_each_src_dest0'
+  /usr/lib/ruby/1.8/fileutils.rb:1394:in `fu_each_src_dest'
+  /usr/lib/ruby/1.8/fileutils.rb:382:in `copy'
+  config/initializers/file_classification.rb:37:in `save'
+  app/controllers/funcionarios_controller.rb:65:in `create'
+
+Rendered rescues/_trace (46.3ms)
+Rendered rescues/_request_and_response (0.6ms)
+Rendering rescues/layout (internal_server_error)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#create (for 127.0.0.1 at 2012-02-09 17:31:41) [POST]
+  Parameters: {"funcionario"=>{"endereco"=>"", "cep"=>"", "cpf"=>"123456", "nome"=>"Nardao", "setor"=>"", "tel"=>"121212", "bairro"=>"", "estado"=>"", "cidade"=>"", "turno"=>"", "cel"=>"", "rg"=>"123456"}, "foto"=>#<File:/tmp/RackMultipart20120209-9974-6ybm4g-0>}
+  [4;35;1mSQL (0.3ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.9ms)[0m   [0;1mINSERT INTO "funcionarios" ("endereco", "created_at", "nome", "cpf", "cep", "updated_at", "tel", "setor", "foto", "bairro", "cidade", "estado", "turno", "rg", "cel") VALUES('', '2012-02-09 17:31:41.154004', 'Nardao', '123456', NULL, '2012-02-09 17:31:41.154004', 121212, '', NULL, '', '', '', '', '123456', NULL) RETURNING "id"[0m
+  [4;35;1mSQL (23.5ms)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFuncionario Update (0.7ms)[0m   [0mUPDATE "funcionarios" SET "updated_at" = '2012-02-09 17:31:41.188978', "foto" = '5_IMGP2816.JPG' WHERE "id" = 5[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mCOMMIT[0m
+Completed in 57ms (View: 3, DB: 27) | 200 OK [http://localhost/funcionarios]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:31:41) [GET]
+  [4;36;1mFuncionario Load (1.4ms)[0m   [0;1mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 35ms (View: 26, DB: 3) | 200 OK [http://localhost/funcionarios]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:31:41) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328815901626", "limit"=>"10"}
+  [4;36;1mFuncionario Load (2.0ms)[0m   [0;1mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 19ms (View: 6, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328815901626&start=0&limit=10]
+  [4;36;1mSQL (0.9ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#destroy (for 127.0.0.1 at 2012-02-09 17:33:58) [GET]
+  Parameters: {"id"=>"5", "_dc"=>"1328816038787"}
+  [4;35;1mFuncionario Load (0.8ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 5) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFuncionario Destroy (0.4ms)[0m   [0mDELETE FROM "funcionarios" WHERE "id" = 5[0m
+  [4;36;1mSQL (27.2ms)[0m   [0;1mCOMMIT[0m
+Completed in 43ms (View: 1, DB: 30) | 200 OK [http://localhost/funcionarios/destroy/5?_dc=1328816038787]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:33:59) [GET]
+  [4;36;1mFuncionario Load (1.4ms)[0m   [0;1mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 12ms (View: 2, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:33:59) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328816039120", "limit"=>"10"}
+  [4;36;1mFuncionario Load (2.0ms)[0m   [0;1mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (1.0ms)[0m   [0mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 19ms (View: 5, DB: 4) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328816039120&start=0&limit=10]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#destroy (for 127.0.0.1 at 2012-02-09 17:34:01) [GET]
+  Parameters: {"id"=>"4", "_dc"=>"1328816041243"}
+  [4;35;1mFuncionario Load (0.9ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 4) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFuncionario Destroy (0.4ms)[0m   [0mDELETE FROM "funcionarios" WHERE "id" = 4[0m
+  [4;36;1mSQL (21.8ms)[0m   [0;1mCOMMIT[0m
+Completed in 39ms (View: 1, DB: 24) | 200 OK [http://localhost/funcionarios/destroy/4?_dc=1328816041243]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:34:01) [GET]
+  [4;36;1mFuncionario Load (1.3ms)[0m   [0;1mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 12ms (View: 2, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:34:01) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328816041522", "limit"=>"10"}
+  [4;36;1mFuncionario Load (1.9ms)[0m   [0;1mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 16ms (View: 4, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328816041522&start=0&limit=10]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#destroy (for 127.0.0.1 at 2012-02-09 17:34:05) [GET]
+  Parameters: {"id"=>"1", "_dc"=>"1328816045914"}
+  [4;35;1mFuncionario Load (0.9ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 1) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mFuncionario Destroy (0.3ms)[0m   [0mDELETE FROM "funcionarios" WHERE "id" = 1[0m
+  [4;36;1mSQL (32.7ms)[0m   [0;1mCOMMIT[0m
+Completed in 48ms (View: 1, DB: 35) | 200 OK [http://localhost/funcionarios/destroy/1?_dc=1328816045914]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:34:06) [GET]
+  [4;36;1mFuncionario Load (1.2ms)[0m   [0;1mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 12ms (View: 3, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:34:06) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328816046221", "limit"=>"10"}
+  [4;36;1mFuncionario Load (1.8ms)[0m   [0;1mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 14ms (View: 1, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328816046221&start=0&limit=10]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#new (for 127.0.0.1 at 2012-02-09 17:34:41) [GET]
+Rendering template within layouts/funcionarios
+Rendering funcionarios/new
+Completed in 20ms (View: 9, DB: 2) | 200 OK [http://localhost/funcionarios/new]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#create (for 127.0.0.1 at 2012-02-09 17:34:52) [POST]
+  Parameters: {"funcionario"=>{"endereco"=>"", "cep"=>"", "cpf"=>"123", "nome"=>"Ronaldo", "setor"=>"", "tel"=>"123", "bairro"=>"", "estado"=>"", "cidade"=>"", "turno"=>"", "cel"=>"", "rg"=>"123"}, "foto"=>#<File:/tmp/RackMultipart20120209-9974-12uvxu8-0>}
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mINSERT INTO "funcionarios" ("endereco", "created_at", "nome", "cpf", "cep", "updated_at", "tel", "setor", "foto", "bairro", "cidade", "estado", "turno", "rg", "cel") VALUES('', '2012-02-09 17:34:52.161014', 'Ronaldo', '123', NULL, '2012-02-09 17:34:52.161014', 123, '', NULL, '', '', '', '', '123', NULL) RETURNING "id"[0m
+  [4;36;1mSQL (21.2ms)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mFuncionario Update (1.2ms)[0m   [0;1mUPDATE "funcionarios" SET "updated_at" = '2012-02-09 17:34:52.193826', "foto" = '6_IMGP2816.JPG' WHERE "id" = 6[0m
+  [4;35;1mSQL (311.0ms)[0m   [0mCOMMIT[0m
+Completed in 363ms (View: 1, DB: 335) | 200 OK [http://localhost/funcionarios]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:34:52) [GET]
+  [4;35;1mFuncionario Load (1.4ms)[0m   [0mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 12ms (View: 3, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:34:53) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328816092857", "limit"=>"10"}
+  [4;35;1mFuncionario Load (2.0ms)[0m   [0mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 17ms (View: 4, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328816092857&start=0&limit=10]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#edit (for 127.0.0.1 at 2012-02-09 17:34:54) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mFuncionario Load (0.9ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/edit
+Completed in 24ms (View: 11, DB: 3) | 200 OK [http://localhost/funcionarios/edit/6]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#update (for 127.0.0.1 at 2012-02-09 17:34:56) [POST]
+  Parameters: {"id"=>"6", "funcionario"=>{"endereco"=>"", "cep"=>"", "cpf"=>"123", "nome"=>"Ronaldo", "setor"=>"", "tel"=>"123", "bairro"=>"", "estado"=>"", "cidade"=>"", "turno"=>"", "cel"=>"", "rg"=>"123"}}
+  [4;36;1mFuncionario Load (0.8ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+  [4;35;1mSQL (0.4ms)[0m   [0mBEGIN[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mCOMMIT[0m
+Completed in 63ms (View: 1, DB: 2) | 200 OK [http://localhost/funcionarios/update/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:34:57) [GET]
+  [4;36;1mFuncionario Load (2.0ms)[0m   [0;1mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 13ms (View: 3, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:34:57) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328816097374", "limit"=>"10"}
+  [4;36;1mFuncionario Load (2.1ms)[0m   [0;1mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 18ms (View: 4, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328816097374&start=0&limit=10]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#edit (for 127.0.0.1 at 2012-02-09 17:35:01) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (1.0ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/edit
+Completed in 18ms (View: 5, DB: 3) | 200 OK [http://localhost/funcionarios/edit/6]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#update (for 127.0.0.1 at 2012-02-09 17:35:06) [POST]
+  Parameters: {"id"=>"6", "funcionario"=>{"endereco"=>"", "cep"=>"", "cpf"=>"123", "nome"=>"Ronaldo", "setor"=>"", "tel"=>"123", "bairro"=>"", "estado"=>"", "cidade"=>"", "turno"=>"", "cel"=>"", "rg"=>"123"}, "foto"=>#<File:/tmp/RackMultipart20120209-9974-raxkc0-0>}
+  [4;35;1mFuncionario Load (0.8ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mBEGIN[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mCOMMIT[0m
+Completed in 19ms (View: 1, DB: 2) | 200 OK [http://localhost/funcionarios/update/6]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:35:07) [GET]
+  [4;35;1mFuncionario Load (1.3ms)[0m   [0mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 12ms (View: 2, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.7ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:35:07) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328816107316", "limit"=>"10"}
+  [4;35;1mFuncionario Load (1.9ms)[0m   [0mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 18ms (View: 5, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328816107316&start=0&limit=10]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:35:09) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mFuncionario Load (1.0ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 28ms (View: 15, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2012-02-09 17:38:45) [GET]
+  [4;36;1mUser Load (0.7ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/main
+Rendering login/index
+Completed in 83ms (View: 65, DB: 4) | 200 OK [http://localhost/pcp]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:38:45) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:38:45) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:38:45) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:38:45) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:38:45) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:38:45) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:38:54) [GET]
+
+ActionController::RoutingError (No route matches "/images/index_tabs.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:38:54) [GET]
+  [4;36;1mFuncionario Load (1.3ms)[0m   [0;1mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 18ms (View: 7, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:38:54) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328816334231", "limit"=>"10"}
+  [4;36;1mFuncionario Load (2.8ms)[0m   [0;1mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 29ms (View: 4, DB: 4) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328816334231&start=0&limit=10]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#edit (for 127.0.0.1 at 2012-02-09 17:38:55) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (0.8ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/edit
+Completed in 19ms (View: 5, DB: 3) | 200 OK [http://localhost/funcionarios/edit/6]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:38:58) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (0.8ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 23ms (View: 9, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:40:26) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (0.8ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 25ms (View: 11, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:40:45) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (0.9ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 19ms (View: 5, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:41:07) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (0.9ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 22ms (View: 8, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:41:35) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (0.8ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 75ms (View: 62, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:41:45) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (0.7ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 40ms (View: 27, DB: 2) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:42:32) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (0.8ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 24ms (View: 11, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:42:32) [GET]
+
+ActionController::RoutingError (No route matches "/uploaded_pics/6_IMGP2816.JPG" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:42:50) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mFuncionario Load (0.8ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 74ms (View: 5, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:42:50) [GET]
+
+ActionController::RoutingError (No route matches "/uploaded_pics/6_IMGP2816.JPG" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:43:04) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (0.9ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 26ms (View: 10, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:43:27) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (1.0ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 24ms (View: 10, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:43:35) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (0.8ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 24ms (View: 11, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2012-02-09 17:43:55) [GET]
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/main
+Rendering login/index
+Completed in 36ms (View: 17, DB: 4) | 200 OK [http://localhost/pcp]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:43:55) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:43:55) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:43:55) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:43:55) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:43:55) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:43:55) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:43:58) [GET]
+
+ActionController::RoutingError (No route matches "/images/index_tabs.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:43:58) [GET]
+  [4;35;1mFuncionario Load (1.4ms)[0m   [0mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 24ms (View: 13, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (1.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:43:58) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328816638652", "limit"=>"10"}
+  [4;35;1mFuncionario Load (2.0ms)[0m   [0mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 26ms (View: 6, DB: 4) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328816638652&start=0&limit=10]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:44:00) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mFuncionario Load (0.9ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 21ms (View: 7, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:44:25) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mFuncionario Load (0.8ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 24ms (View: 10, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:46:02) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mFuncionario Load (0.8ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 29ms (View: 15, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:47:07) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mFuncionario Load (1.2ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 26ms (View: 11, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2012-02-09 17:48:03) [GET]
+  [4;36;1mUser Load (1.1ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mUser Load (0.6ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/main
+Rendering login/index
+Completed in 26ms (View: 6, DB: 5) | 200 OK [http://localhost/pcp]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:48:03) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:48:03) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:48:03) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:48:03) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:48:04) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:48:04) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:48:13) [GET]
+
+ActionController::RoutingError (No route matches "/images/index_tabs.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:48:13) [GET]
+  [4;36;1mFuncionario Load (1.4ms)[0m   [0;1mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 13ms (View: 2, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:48:14) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328816893895", "limit"=>"10"}
+  [4;36;1mFuncionario Load (3.7ms)[0m   [0;1mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 30ms (View: 4, DB: 6) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328816893895&start=0&limit=10]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:48:16) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (1.1ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 24ms (View: 10, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2012-02-09 17:50:02) [GET]
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.6ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/main
+Rendering login/index
+Completed in 24ms (View: 5, DB: 4) | 200 OK [http://localhost/pcp]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:50:02) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:50:02) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:50:02) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:50:02) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:50:02) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:50:02) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:50:06) [GET]
+
+ActionController::RoutingError (No route matches "/images/index_tabs.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:50:06) [GET]
+  [4;35;1mFuncionario Load (1.5ms)[0m   [0mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 18ms (View: 8, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:50:07) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328817007030", "limit"=>"10"}
+  [4;35;1mFuncionario Load (1.9ms)[0m   [0mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 67ms (View: 4, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328817007030&start=0&limit=10]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:50:08) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mFuncionario Load (1.0ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 21ms (View: 6, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:50:30) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mFuncionario Load (0.9ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 20ms (View: 6, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:51:33) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mFuncionario Load (1.0ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 25ms (View: 10, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;35;1mSQL (0.6ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:52:05) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mFuncionario Load (0.9ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 23ms (View: 9, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:52:35) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mFuncionario Load (0.8ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 22ms (View: 9, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2012-02-09 17:52:49) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/main
+Rendering login/index
+Completed in 22ms (View: 5, DB: 4) | 200 OK [http://localhost/pcp]
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:52:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:52:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:52:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:52:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:52:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:52:50) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:52:51) [GET]
+
+ActionController::RoutingError (No route matches "/images/index_tabs.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:52:52) [GET]
+  [4;36;1mFuncionario Load (1.5ms)[0m   [0;1mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 17ms (View: 7, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:52:52) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328817172139", "limit"=>"10"}
+  [4;36;1mFuncionario Load (2.0ms)[0m   [0;1mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 27ms (View: 6, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328817172139&start=0&limit=10]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:52:53) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (1.0ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 21ms (View: 6, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2012-02-09 17:53:36) [GET]
+  [4;35;1mUser Load (0.8ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.4ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/main
+Rendering login/index
+Completed in 23ms (View: 5, DB: 4) | 200 OK [http://localhost/pcp]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:53:37) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.8ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:53:37) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:53:37) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:53:37) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (1.0ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:53:37) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:53:37) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 17:53:38) [GET]
+
+ActionController::RoutingError (No route matches "/images/index_tabs.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:53:38) [GET]
+  [4;35;1mFuncionario Load (1.3ms)[0m   [0mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 18ms (View: 7, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:53:38) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328817218777", "limit"=>"10"}
+  [4;35;1mFuncionario Load (2.0ms)[0m   [0mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 25ms (View: 6, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328817218777&start=0&limit=10]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:53:39) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mFuncionario Load (0.8ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 18ms (View: 5, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.7ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:53:57) [GET]
+  [4;36;1mFuncionario Load (1.3ms)[0m   [0;1mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 18ms (View: 7, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:53:58) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328817237933", "limit"=>"10"}
+  [4;36;1mFuncionario Load (1.9ms)[0m   [0;1mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 16ms (View: 4, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328817237933&start=0&limit=10]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:53:59) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (0.8ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 18ms (View: 5, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClientesController#index (for 127.0.0.1 at 2012-02-09 17:54:10) [GET]
+  [4;35;1mCliente Load (5.6ms)[0m   [0mSELECT * FROM "clientes" [0m
+Rendering template within layouts/clientes
+Rendering clientes/index
+Completed in 78ms (View: 44, DB: 10) | 200 OK [http://localhost/clientes]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ClientesController#store (for 127.0.0.1 at 2012-02-09 17:54:10) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328817250395", "limit"=>"10"}
+  [4;35;1mCliente Load (1.9ms)[0m   [0mSELECT * FROM "clientes" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "clientes" [0m
+Completed in 18ms (View: 4, DB: 3) | 200 OK [http://localhost/clientes/store/grid?_dc=1328817250395&start=0&limit=10]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProdutosController#index (for 127.0.0.1 at 2012-02-09 17:54:13) [GET]
+  [4;36;1mProduto Load (1.4ms)[0m   [0;1mSELECT * FROM "produtos" [0m
+Rendering template within layouts/produtos
+Rendering produtos/index
+Completed in 83ms (View: 40, DB: 4) | 200 OK [http://localhost/produtos]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ProdutosController#store (for 127.0.0.1 at 2012-02-09 17:54:14) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328817254074", "limit"=>"10"}
+  [4;36;1mProduto Load (2.0ms)[0m   [0;1mSELECT * FROM "produtos" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "produtos" [0m
+Completed in 19ms (View: 3, DB: 3) | 200 OK [http://localhost/produtos/store/grid?_dc=1328817254074&start=0&limit=10]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:54:14) [GET]
+  [4;35;1mFuncionario Load (1.5ms)[0m   [0mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 17ms (View: 7, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.9ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:54:14) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328817254649", "limit"=>"10"}
+  [4;35;1mFuncionario Load (2.0ms)[0m   [0mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 17ms (View: 4, DB: 4) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328817254649&start=0&limit=10]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:54:15) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mFuncionario Load (0.9ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 19ms (View: 5, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:54:46) [GET]
+  [4;36;1mFuncionario Load (1.4ms)[0m   [0;1mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 18ms (View: 7, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:54:47) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328817286891", "limit"=>"10"}
+  [4;36;1mFuncionario Load (2.3ms)[0m   [0;1mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 23ms (View: 5, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328817286891&start=0&limit=10]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:54:48) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (1.0ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 19ms (View: 5, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:55:43) [GET]
+  [4;35;1mFuncionario Load (1.4ms)[0m   [0mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 17ms (View: 7, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:55:43) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328817343173", "limit"=>"10"}
+  [4;35;1mFuncionario Load (1.9ms)[0m   [0mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 17ms (View: 4, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328817343173&start=0&limit=10]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:55:44) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mFuncionario Load (0.8ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 22ms (View: 9, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:56:10) [GET]
+  [4;36;1mFuncionario Load (1.3ms)[0m   [0;1mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 16ms (View: 6, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:56:10) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328817370629", "limit"=>"10"}
+  [4;36;1mFuncionario Load (1.9ms)[0m   [0;1mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 16ms (View: 4, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328817370629&start=0&limit=10]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:56:12) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (0.8ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 19ms (View: 5, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:56:24) [GET]
+  [4;35;1mFuncionario Load (1.3ms)[0m   [0mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 17ms (View: 7, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:56:24) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328817384524", "limit"=>"10"}
+  [4;35;1mFuncionario Load (1.9ms)[0m   [0mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 17ms (View: 4, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328817384524&start=0&limit=10]
+  [4;35;1mSQL (0.8ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:56:25) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mFuncionario Load (0.8ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 18ms (View: 5, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:56:40) [GET]
+  [4;36;1mFuncionario Load (1.3ms)[0m   [0;1mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 14ms (View: 4, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:56:41) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328817400957", "limit"=>"10"}
+  [4;36;1mFuncionario Load (1.9ms)[0m   [0;1mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 18ms (View: 4, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328817400957&start=0&limit=10]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:56:42) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (0.8ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 22ms (View: 9, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:56:58) [GET]
+  [4;35;1mFuncionario Load (1.4ms)[0m   [0mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 17ms (View: 6, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:56:58) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328817418629", "limit"=>"10"}
+  [4;35;1mFuncionario Load (1.9ms)[0m   [0mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 18ms (View: 4, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328817418629&start=0&limit=10]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:56:59) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mFuncionario Load (1.0ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 21ms (View: 6, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:57:15) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mFuncionario Load (0.9ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 23ms (View: 9, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:57:25) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mFuncionario Load (0.9ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 23ms (View: 9, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:57:41) [GET]
+  [4;36;1mFuncionario Load (1.3ms)[0m   [0;1mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 16ms (View: 6, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:57:41) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328817461494", "limit"=>"10"}
+  [4;36;1mFuncionario Load (1.9ms)[0m   [0;1mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 16ms (View: 4, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328817461494&start=0&limit=10]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:57:42) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (0.9ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 18ms (View: 5, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:58:14) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (0.8ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 21ms (View: 9, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.5ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:58:26) [GET]
+  [4;35;1mFuncionario Load (1.3ms)[0m   [0mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 17ms (View: 7, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:58:27) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328817507045", "limit"=>"10"}
+  [4;35;1mFuncionario Load (1.9ms)[0m   [0mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 17ms (View: 4, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328817507045&start=0&limit=10]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:58:28) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mFuncionario Load (0.9ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 19ms (View: 5, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:58:36) [GET]
+  [4;36;1mFuncionario Load (1.4ms)[0m   [0;1mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 17ms (View: 7, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:58:36) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328817516639", "limit"=>"10"}
+  [4;36;1mFuncionario Load (2.0ms)[0m   [0;1mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 17ms (View: 4, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328817516639&start=0&limit=10]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:58:37) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (0.8ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 18ms (View: 5, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 17:58:48) [GET]
+  [4;35;1mFuncionario Load (1.3ms)[0m   [0mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 16ms (View: 6, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 17:58:48) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328817528809", "limit"=>"10"}
+  [4;35;1mFuncionario Load (1.9ms)[0m   [0mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.6ms)[0m   [0;1mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 17ms (View: 4, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328817528809&start=0&limit=10]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 17:58:50) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mFuncionario Load (0.9ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 20ms (View: 6, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 18:00:01) [GET]
+  [4;36;1mFuncionario Load (1.3ms)[0m   [0;1mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 12ms (View: 2, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 18:00:01) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328817601603", "limit"=>"10"}
+  [4;36;1mFuncionario Load (1.9ms)[0m   [0;1mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 17ms (View: 4, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328817601603&start=0&limit=10]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 18:00:02) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (1.0ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 22ms (View: 9, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 18:00:45) [GET]
+  [4;35;1mFuncionario Load (1.4ms)[0m   [0mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 17ms (View: 7, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 18:00:45) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328817645278", "limit"=>"10"}
+  [4;35;1mFuncionario Load (1.9ms)[0m   [0mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 17ms (View: 4, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328817645278&start=0&limit=10]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 18:00:46) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mFuncionario Load (0.7ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 19ms (View: 5, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 18:01:43) [GET]
+  [4;36;1mFuncionario Load (1.4ms)[0m   [0;1mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 17ms (View: 7, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 18:01:44) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328817704128", "limit"=>"10"}
+  [4;36;1mFuncionario Load (1.9ms)[0m   [0;1mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 17ms (View: 4, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328817704128&start=0&limit=10]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 18:01:45) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (0.8ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 20ms (View: 6, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 18:01:57) [GET]
+  [4;35;1mFuncionario Load (1.3ms)[0m   [0mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 18ms (View: 8, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 18:01:58) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328817718150", "limit"=>"10"}
+  [4;35;1mFuncionario Load (2.2ms)[0m   [0mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 17ms (View: 4, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328817718150&start=0&limit=10]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 18:01:59) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mFuncionario Load (0.9ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 16ms (View: 2, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 18:02:40) [GET]
+  [4;36;1mFuncionario Load (1.7ms)[0m   [0;1mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 17ms (View: 7, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 18:02:40) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328817760422", "limit"=>"10"}
+  [4;36;1mFuncionario Load (1.9ms)[0m   [0;1mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 18ms (View: 5, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328817760422&start=0&limit=10]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 18:02:41) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (0.7ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 22ms (View: 9, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2012-02-09 18:03:51) [GET]
+  [4;35;1mUser Load (0.7ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;36;1mUser Load (0.5ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/main
+Rendering login/index
+Completed in 24ms (View: 6, DB: 5) | 200 OK [http://localhost/pcp]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 18:03:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 18:03:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 18:03:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 18:03:51) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 18:03:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 18:03:52) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 18:03:56) [GET]
+
+ActionController::RoutingError (No route matches "/images/index_tabs.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 18:03:56) [GET]
+  [4;35;1mFuncionario Load (1.3ms)[0m   [0mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 16ms (View: 7, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (1.1ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 18:03:56) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328817836231", "limit"=>"10"}
+  [4;35;1mFuncionario Load (2.1ms)[0m   [0mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;36;1mSQL (0.5ms)[0m   [0;1mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 27ms (View: 6, DB: 4) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328817836231&start=0&limit=10]
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 18:03:57) [GET]
+  Parameters: {"id"=>"6"}
+  [4;36;1mFuncionario Load (0.8ms)[0m   [0;1mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 24ms (View: 11, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing LoginController#index (for 127.0.0.1 at 2012-02-09 18:04:14) [GET]
+  [4;36;1mUser Load (0.8ms)[0m   [0;1mSELECT * FROM "users" WHERE ("users"."id" = 3) LIMIT 1[0m
+  [4;35;1mUser Load (0.4ms)[0m   [0mSELECT * FROM "users" WHERE ("users"."id" = 3) [0m
+Rendering template within layouts/main
+Rendering login/index
+Completed in 24ms (View: 7, DB: 4) | 200 OK [http://localhost/pcp]
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 18:04:14) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 18:04:14) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.4ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.3ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 18:04:14) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 18:04:14) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/effects.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.3ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 18:04:14) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/dragdrop.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 18:04:15) [GET]
+
+ActionController::RoutingError (No route matches "/javascripts/controls.js" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing ApplicationController#index (for 127.0.0.1 at 2012-02-09 18:04:16) [GET]
+
+ActionController::RoutingError (No route matches "/images/index_tabs.png" with {:method=>:get}):
+  
+
+Rendering rescues/layout (not_found)
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#index (for 127.0.0.1 at 2012-02-09 18:04:16) [GET]
+  [4;36;1mFuncionario Load (1.3ms)[0m   [0;1mSELECT * FROM "funcionarios" [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/index
+Completed in 16ms (View: 7, DB: 4) | 200 OK [http://localhost/funcionarios]
+  [4;35;1mSQL (0.1ms)[0m   [0mSET client_min_messages TO 'panic'[0m
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET standard_conforming_strings = on[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#store (for 127.0.0.1 at 2012-02-09 18:04:16) [GET]
+  Parameters: {"id"=>"grid", "start"=>"0", "_dc"=>"1328817856298", "limit"=>"10"}
+  [4;36;1mFuncionario Load (1.9ms)[0m   [0;1mSELECT * FROM "funcionarios" ORDER BY nome LIMIT 10 OFFSET 0[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSELECT count(*) AS count_all FROM "funcionarios" [0m
+Completed in 27ms (View: 5, DB: 3) | 200 OK [http://localhost/funcionarios/store/grid?_dc=1328817856298&start=0&limit=10]
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 18:04:18) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (0.7ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 18ms (View: 5, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;36;1mSQL (0.4ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.6ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.2ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 18:04:39) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (0.9ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 23ms (View: 9, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'panic'[0m
+  [4;35;1mSQL (0.2ms)[0m   [0mSET standard_conforming_strings = on[0m
+  [4;36;1mSQL (0.1ms)[0m   [0;1mSET client_min_messages TO 'notice'[0m
+
+
+Processing FuncionariosController#show (for 127.0.0.1 at 2012-02-09 18:05:11) [GET]
+  Parameters: {"id"=>"6"}
+  [4;35;1mFuncionario Load (0.9ms)[0m   [0mSELECT * FROM "funcionarios" WHERE ("funcionarios"."id" = 6) [0m
+Rendering template within layouts/funcionarios
+Rendering funcionarios/show
+Completed in 73ms (View: 9, DB: 3) | 200 OK [http://localhost/funcionarios/show/6]

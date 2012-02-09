@@ -80,3 +80,4 @@ end
 #######################################################
 #ActionMailer::Base.delivery_method = :smtp
 #######################################################
+ICONS_LOCAL = "#{RAILS_ROOT}/public/images/uploaded_pics/"

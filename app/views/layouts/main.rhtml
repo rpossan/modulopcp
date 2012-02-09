@@ -11,6 +11,7 @@
 		<%= javascript_include_tag "/ext-3.4.0/adapter/ext/ext-base.js" %>
 		<%= javascript_include_tag "/ext-3.4.0/ext-all.js" %>
 		<%= javascript_include_tag "/ext-3.4.0/examples/ux/fileuploadfield/FileUploadField.js" %>
+		<%= javascript_include_tag 'file_control' %>
 		<%= javascript_include_tag 'pcp4erp_helpers' %>
 		<%= javascript_include_tag 'pcp4erp' %>
 	</head>
@@ -44,10 +45,10 @@
 				<div
 				style="cursor:pointer;"
 				onMouseOver="setMouseOver(this, 'mnFuncionarios')"
-				onMouseOut="setMouseOut(this, 'mnFuncionarios)"
+				onMouseOut="setMouseOut(this, 'mnFuncionarios')"
 				onclick="addNewTab('tab_funcionarios', 'Funcionarios','List', 'funcionarios', 'funcionarios-icon')">
 					<li>
-						<a id="mnClientes" href="#">Funcionarios</a>
+						<a id="mnFuncionarios" href="#">Funcionarios</a>
 					</li>
 				</div>
 				<div

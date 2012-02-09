@@ -2,6 +2,7 @@
 
 		var form_newFuncionarios = new Ext.FormPanel({
 			frame:true,
+			fileUpload: true,
 			title: 'Crie novo funcionario conforme formulário abaixo',
 			bodyStyle:'padding:5px 5px 0',
 			style: "margin: 0px auto 0px auto;",
@@ -25,7 +26,29 @@
 						{ xtype:'textfield', fieldLabel: 'Bairro', name: 'funcionario[bairro]', allowBlank: true, maxLength: 30 },
 						{ xtype:'textfield', fieldLabel: 'CEP', name: 'funcionario[cep]', allowBlank: true, maxLength: 30 },
 						{ xtype:'textfield', fieldLabel: 'Setor', name: 'funcionario[setor]', allowBlank: true, maxLength: 30 },
-						{ xtype:'textfield', fieldLabel: 'Turno', name: 'funcionario[turno]', allowBlank: true, maxLength: 30 }
+						{ xtype:'textfield', fieldLabel: 'Turno', name: 'funcionario[turno]', allowBlank: true, maxLength: 30 },
+						{
+							id: 'funcionario_foto',
+							xtype:'fileuploadfield',
+							listeners:  {change: validFiles },
+							fieldLabel:'Icon File',
+							submitValue:true,
+							buttonText: 'Pesquisar...',
+							name: 'foto',
+							emptyText: 'Selecione uma imagem',
+							listeners: { render: function(c)
+								{
+									Ext.QuickTips.register({
+										target: c,
+										trackMouse: true,
+										width: 330,
+										text: 'Formatos validos: <b>PNG, JPEG, JPEG or GIF</b><br />'+
+										'Max size: <b>512 kbs</b><br />'+
+										'<b>Para melhor resolução utilize 37x37</b>'
+									});
+    							}
+							}
+						}
 					]
 				}
 			],

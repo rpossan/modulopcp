@@ -55,12 +55,32 @@ class FuncionariosController < ApplicationController
   # POST /funcionarios.xml
   def create
     @funcionario = Funcionario.new(params[:funcionario])
-    respond_to do |format|
-      if @funcionario.save
-        format.html { render :json => {:success => true} }
-        format.xml  { render :xml => @funcionario, :status => :created, :location => @funcionario }
+    file = params[:foto]
+    if file
+      file.configure(FileClassification::IMAGES::config)
+      if file.is_valid?
+        if @funcionario.save
+          file.file_name = "#{@funcionario.id.to_s}_#{file.original_filename}"
+          params[:funcionario]['foto'] = file.file_name
+          if file.save
+            @funcionario.update_attribute(:foto, file.file_name)
+            respond_to {|format| format.html { render :json => {:success => true} } }
+          else
+            @funcionario.destroy
+            respond_to {|format| format.html { render :json => {:success => false, :errors => file.errors.join('<br />')} } }
+          end
+        end
       else
-        format.html { render :json => ( (@funcionario.errors.full_messages.join(".<br />").to_s + ".").to_json ) } unless @funcionario.errors.empty?
+        respond_to {|format| format.html { render :json => {:success => false, :errors => file.errors.join('<br />')} } }
+      end
+    else
+      respond_to do |format|
+        if @funcionario.save
+          format.html { render :json => {:success => true} }
+          format.xml  { render :xml => @funcionario, :status => :created, :location => @funcionario }
+        else
+          format.html { render :json => ( (@funcionario.errors.full_messages.join(".<br />").to_s + ".").to_json ) } unless @funcionario.errors.empty?
+        end
       end
     end
   end
