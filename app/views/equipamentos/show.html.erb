@@ -1,0 +1,28 @@
+<p>
+  <b>Codigo:</b>
+  <%=h @equipamento.codigo %>
+</p>
+
+<p>
+  <b>Modelo:</b>
+  <%=h @equipamento.modelo %>
+</p>
+
+<p>
+  <b>Tipo:</b>
+  <%=h @equipamento.tipo %>
+</p>
+
+<p>
+  <b>Serie:</b>
+  <%=h @equipamento.serie %>
+</p>
+
+<p>
+  <b>Horas dia:</b>
+  <%=h @equipamento.horas_dia %>
+</p>
+
+
+<%= link_to 'Edit', edit_equipamento_path(@equipamento) %> |
+<%= link_to 'Back', equipamentos_path %>

@@ -1,4 +1,8 @@
 ActionController::Routing::Routes.draw do |map|
+  map.resources :ordems
+
+  map.resources :equipamentos
+
   map.resources :funcionarios
 
   map.resources :clientes

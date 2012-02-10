@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  codigo: MyString
+  modelo: MyString
+  tipo: MyString
+  serie: MyString
+  horas_dia: 9.99
+
+two:
+  codigo: MyString
+  modelo: MyString
+  tipo: MyString
+  serie: MyString
+  horas_dia: 9.99

@@ -1,0 +1,103 @@
+<script type="text/javascript">
+		var store_combo_Produtos =
+		createStore('/produtos/store/combo', ['id', 'nome'], [{name: 'id',  mapping: 'id'}, {name: 'nome',  mapping: 'nome'}]);
+
+		var comboProdutos =
+		new Ext.form.ComboBox({
+			fieldLabel: 'Produto',
+			valueField: 'id',
+			displayField: 'nome',
+			name: 'ordem[produto_id]',
+			hiddenName: 'ordem[produto_id]',
+			editable: true,
+			emptyText: 'Selecione o produto...',
+			store: store_combo_Produtos,
+			mode: 'remote',
+			selectOnFocus: true,
+			forceSelection: true,
+			triggerAction: 'all',
+			minChars: 3,
+			allowBlank: false,
+			width: 350,
+			listeners: { beforequery: function(qe){ delete qe.combo.lastQuery; } }
+		});
+
+		var store_combo_Clientes =
+		createStore('/clientes/store/combo', ['id', 'nome'], [{name: 'id',  mapping: 'id'}, {name: 'nome',  mapping: 'nome'}]);
+
+		var comboClientes =
+		new Ext.form.ComboBox({
+			fieldLabel: 'Cliente',
+			valueField: 'id',
+			displayField: 'nome',
+			name: 'ordem[cliente_id]',
+			hiddenName: 'ordem[cliente_id]',
+			editable: true,
+			emptyText: 'Selecione o cliente...',
+			store: store_combo_Clientes,
+			mode: 'remote',
+			selectOnFocus: true,
+			forceSelection: true,
+			triggerAction: 'all',
+			minChars: 3,
+			allowBlank: false,
+			width: 350,
+			listeners: { beforequery: function(qe){ delete qe.combo.lastQuery; } }
+		});
+
+		var form_newOrdems = new Ext.FormPanel({
+			frame:true,
+			title: 'Crie nova ordem de serviço conforme formulário abaixo',
+			bodyStyle:'padding:5px 5px 0',
+			style: "margin: 0px auto 0px auto;",
+			width: 520,
+			defaultType: 'textfield',
+			monitorValid: true,
+			items: [
+				{
+					xtype:"fieldset",
+					autoHeight: true,
+					defaults: {width: 350},
+					items: [
+						{ xtype:'textfield', fieldLabel: 'Título', name: 'ordem[titulo]', allowBlank:false, maxLength: 50 },
+						comboClientes,
+						comboProdutos,
+						{ xtype:'numberfield', fieldLabel: 'Quantidade', name: 'ordem[qtde]', allowBlank: false, maxLength: 4, width: 50 },
+						{ xtype:'datefield', fieldLabel: 'Previsão', name: 'ordem[data_prevista]', allowBlank: false, width: 90 }
+					]
+				}
+			],
+			buttons: [
+				{
+					text: 'Salvar',
+					handler:function(){
+						if(form_newOrdems.getForm().isValid()){
+							form_newOrdems.getForm().submit({
+								url:'<%= url_for (:controller => 'ordems', :action => 'create') %>',
+								waitMsg:'Saving Data...',
+								success: function(form, action){
+									var ret = Ext.util.JSON.decode(action.response.responseText);
+									Ext.Msg.alert('OK','Ordem cadastrado com sucesso!');
+									closeSubTab('tab_ordems', 'sub_tab_ordems_new');
+									updateSubTab('tab_ordems','sub_tab_ordems','Ordems','<%= ordems_path %>');
+									addSubTab('tab_ordems', 'sub_tab_ordems_show_' + ret.id, 'Showing ' + ret.nome, '/ordems/show/' + ret.id, 'showIcon');
+								},
+								failure: function(form, action){
+									if (action.failureType == 'server'){
+										msg = String(Ext.util.JSON.decode(action.response.responseText));
+										Ext.Msg.alert('Validation Error', msg);
+									} else {
+										Ext.Msg.alert('Error', 'There has been a problem while creating this request. Contact the system administrator.');
+									}
+								}
+							});
+						}
+					}
+				},
+				{text: 'Cancel', handler:function(){closeSubTab('tab_ordems','sub_tab_ordems_new');<%= params[:closealll] ?  "closeTab('tab_ordems');" : '' %>}}
+			]
+		});
+
+		form_newOrdems.render('area_form_newOrdems');
+</script>
+<br/><div id="area_form_newOrdems" style="float:left;margin-left:10px;"></div>

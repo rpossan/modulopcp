@@ -1,0 +1,15 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  titulo: MyString
+  cliente_id: 1
+  produto_id: 1
+  data_prevista: 2012-02-10
+  qde: 1
+
+two:
+  titulo: MyString
+  cliente_id: 1
+  produto_id: 1
+  data_prevista: 2012-02-10
+  qde: 1

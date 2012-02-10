@@ -1,0 +1,32 @@
+<h1>Editing ordem</h1>
+
+<% form_for(@ordem) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :titulo %><br />
+    <%= f.text_field :titulo %>
+  </p>
+  <p>
+    <%= f.label :cliente_id %><br />
+    <%= f.text_field :cliente_id %>
+  </p>
+  <p>
+    <%= f.label :produto_id %><br />
+    <%= f.text_field :produto_id %>
+  </p>
+  <p>
+    <%= f.label :data_prevista %><br />
+    <%= f.date_select :data_prevista %>
+  </p>
+  <p>
+    <%= f.label :qde %><br />
+    <%= f.text_field :qde %>
+  </p>
+  <p>
+    <%= f.submit 'Update' %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', @ordem %> |
+<%= link_to 'Back', ordems_path %>

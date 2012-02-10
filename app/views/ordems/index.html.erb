@@ -1,0 +1,97 @@
+<script type = "text/javascript">
+
+	function btnShow(value, metaData, record, rowIndex){
+		var ret =  '<div align="center">'+
+					'<a href="#" onclick="showOrdem(' + rowIndex + ')">'+
+						'<img src="../images/show.png" title="Show" alt="Show" ></img>'+
+					'</a>'+
+				'</div>';
+		return ret;
+	}
+
+	function btnDelete(value, metaData, record, rowIndex, colIndex, store){
+		var ret =  '<div align="center">'+
+					'<a href="#" onclick="deleteOrdem(' + rowIndex + ')">'+
+						'<img src="../images/Recycle_empty.png" title="Delete" alt="Delete" ></img>'+
+					'</a>'+
+				'</div>';
+		return ret;
+	}
+
+	function linkShow(value, metaData, record, rowIndex, colIndex, store){
+		return '<div><a href="#" onclick="editOrdem(' + rowIndex + ')">' + value + '</a></div>';
+	}
+
+	function editOrdem(idx){
+		var id = store_Ordems.getAt(idx).get('id');
+		var name = store_Ordems.getAt(idx).get('name');
+		addSubTab('tab_ordems', 'sub_tab_ordems_edit_'+id, 'Editing ' + name, '/ordems/edit/' + id, 'editIcon');
+	}
+
+	function deleteOrdem(r){
+		var id = store_Ordems.getAt(r).get('id');
+		var name = store_Ordems.getAt(r).get('name');
+		Ext.Msg.confirm('Delete ', 'Confirm delete ordem: ' + name, function(btn) {
+		    if (btn == 'yes') {
+				Ext.Ajax.request({
+		          url: 'ordems/destroy/'+id,
+		          success: function(result, req){
+		                var response = Ext.util.JSON.decode(result.responseText);
+						if(response.msg){
+				            Ext.Msg.alert('Warning', response.msg);
+			            }else{
+			      			updateSubTab('tab_ordems', 'sub_tab_ordems', 'List', '<%= ordems_path %>');
+			      			closeSubTab('tab_ordems', 'sub_tab_ordems_edit_' + id);
+			      			closeSubTab('tab_ordems', 'sub_tab_ordems_show_' + id);
+					    }
+		          },
+		          failure: function() {
+		            Ext.Msg.alert('Error','There was a problem while processing this request');
+		          }
+				});
+		    }
+		  });
+	}
+
+	function showOrdem(r){
+		var id = store_Ordems.getAt(r).get('id');
+		var name = store_Ordems.getAt(r).get('name');
+		addSubTab('tab_ordems', 'sub_tab_ordems_show_'+id, 'Showing ' + name, '/ordems/show/' + id, 'showIcon');
+	}
+
+	function newOrdem(){
+		addSubTab('tab_ordems', 'sub_tab_ordems_new', 'New ordem', '<%= url_for(:action => "new") %>', 'newIcon');
+	}
+
+	var store_Ordems = createStore(
+		'<%= url_for(:controller => "ordems", :action => "store", :id => "grid") %>',
+		['id', 'titulo', 'cliente_nome', 'produto_nome', 'qtde', 'data', 'data_prevista'],
+		[{name: 'id'},{name: 'titulo'},{name: 'cliente_nome'},{name: 'produto_nome'},{name: 'qtde'},{name: 'data'},{name: 'data_prevista'}]
+	);
+
+	var pBar = createPBar(store_Ordems, 'ordems');
+
+	<%= include_buttons_ordems %>
+	var btnsOrdems = createOrdemsBtns();
+	var cmdBar = createCmdBar(btnsOrdems);
+	var cols =
+		[
+       		{header: 'Título', dataIndex: 'titulo', sortable: true, renderer: linkShow},
+      		{header: 'Cliente', dataIndex: 'cliente_nome', sortable: true},
+      		{header: 'Produto', dataIndex: 'produto_nome', sortable: true},
+      		{header: 'Quantidade', dataIndex: 'qtde', sortable: true},
+      		{header: 'Data', dataIndex: 'data', sortable: true},
+      		{header: 'Previsão', dataIndex: 'data_prevista', sortable: true},
+      		{id: 'edit', dataIndex: 'edit', renderer: btnShow},
+      		{id: 'delete', dataIndex: 'delete', renderer: btnDelete, width: 40}
+  		];
+
+  	var grid_Ordems = createGrid(store_Ordems, 'Lista de Ordems', cmdBar, pBar, cols);
+	store_Ordems.load({params: {start:0 , limit:10}});
+	grid_Ordems.render('ordems_index_grid_content');
+
+</script>
+
+<div id = "ordems_index_grid_content">
+  	<!-- AREA TO RENDER GRID  -->
+</div>

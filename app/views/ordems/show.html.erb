@@ -1,0 +1,61 @@
+<div style="padding: 10px;width: 600px;">
+	<p>
+	  <b>Titulo:</b>
+	  <%=h @ordem.titulo %>
+	</p>
+
+	<p>
+	  <b>Cliente:</b>
+	  <a href="#"><%=h @ordem.cliente.nome %></a>
+	</p>
+
+	<p>
+	  <b>Produto:</b>
+	  <a href="#"><%=h @ordem.produto.nome %></a>
+	</p>
+
+	<p>
+	  <b>Data:</b>
+	  <%=h @ordem.created_at.strftime("%d/%m/%Y") %>
+	</p>
+	-
+	<p>
+	  <b>Data prevista:</b>
+	  <%=h @ordem.data_prevista.strftime("%d/%m/%Y") %>
+	</p>
+
+	<p>
+	  <b>Quatidade:</b>
+	  <%=h @ordem.qtde %>
+	</p>
+
+	<br />
+
+	<% tempo_total = 0.00 %>
+
+	<h2>Processo de Fabrica&ccedil;&atilde;o</h2>
+	<table class = "reportTable" style="border:1px solid black;" width = "100%" >
+		<th>Operação/Código</th>
+		<th>Tempo Padrão</th>
+		<th>Produção Hora</th>
+		<th>Tempo Previsto</th>
+		<% zebra = false %>
+		<% @ordem.produto.produto_processos.each do |p| %>
+			<% tempo_total = tempo_total + (@ordem.qtde / p.producao_hora) %>
+			<% zebra ? zebra = false : zebra = true %>
+			<tr>
+				<td style="background-color: <%= zebra ? "#E6E6FA" : "#F8F8FF" %>;"><%= image_tag("save.png", :width => 20) %><%= p.processo.nome %> (<%= p.processo.codigo %>)</td>
+				<td style="background-color: <%= zebra ? "#E6E6FA" : "#F8F8FF" %>;" width="90px" align="center"><%= p.tempo_padrao %></td>
+				<td style="background-color: <%= zebra ? "#E6E6FA" : "#F8F8FF" %>;"width="90px" align="center"><%= p.producao_hora %></td>
+				<td style="background-color: <%= zebra ? "#E6E6FA" : "#F8F8FF" %>;"width="90px" align="center"><%= (@ordem.qtde / p.producao_hora).round(2) %></td>
+			</tr>
+		<% end %>
+	</table>
+	<br />
+	<b>Tempo total de produção previsto:</b> <%= tempo_total.round(2) %> hora(s)<br />
+	<b>Equipamentos dispon&iacute;veis:</b> <%= @equipamentos_disp%> / <b>Horas</b>: <%= @equipamentos_horas %> hora(s)
+	<br /><br />
+	<%= link_to 'Close', "#", :onclick => "closeSubTab('tab_ordems','sub_tab_ordems_show_" + @ordem.id.to_s + "');" %>
+</div>
+
+

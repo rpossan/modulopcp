@@ -44,11 +44,38 @@
 				</div>
 				<div
 				style="cursor:pointer;"
+				onMouseOver="setMouseOver(this, 'mnEquipamento')"
+				onMouseOut="setMouseOut(this, 'mnEquipamento')"
+				onclick="addNewTab('tab_equipamentos', 'Equipamentos','List', 'equipamentos', 'equipamentos-icon')">
+					<li>
+						<a id="mnEquipamento" href="#">Equipamentos</a>
+					</li>
+				</div>
+				<div
+				style="cursor:pointer;"
 				onMouseOver="setMouseOver(this, 'mnFuncionarios')"
 				onMouseOut="setMouseOut(this, 'mnFuncionarios')"
 				onclick="addNewTab('tab_funcionarios', 'Funcionarios','List', 'funcionarios', 'funcionarios-icon')">
 					<li>
 						<a id="mnFuncionarios" href="#">Funcionarios</a>
+					</li>
+				</div>
+				<div
+				style="cursor:pointer;"
+				onMouseOver="setMouseOver(this, 'mnOperacoes')"
+				onMouseOut="setMouseOut(this, 'mnOperacoes')"
+				onclick="addNewTab('tab_processos', 'Operações', 'List', 'processos', 'operacoes-icon')">
+					<li>
+						<a id="mnOperacoes" href="#">Operações</a>
+					</li>
+				</div>
+				<div
+				style="cursor:pointer;"
+				onMouseOver="setMouseOver(this, 'mnManufatura')"
+				onMouseOut="setMouseOut(this, 'mnManufatura')"
+				onclick="addNewTab('tab_produto_processos', 'Processos de Fabricação','List', 'produto_processos', 'manufaturas-icon')">
+					<li>
+						<a id="mnManufatura" href="#">Processos de Fabricação</a>
 					</li>
 				</div>
 				<div
@@ -71,39 +98,18 @@
 				</div>
 			</ul>
 		</div>
-		<div id="engenharia">
-			<ul>
-				<div
-				style="cursor:pointer;"
-				onMouseOver="setMouseOver(this, 'mnEquipamento')"
-				onMouseOut="setMouseOut(this, 'mnEquipamento')"
-				onclick="addNewTab('tab_equipamentos', 'Equipamentos','List', 'equipamentos', 'equipamentos-icon')">
-					<li>
-						<a id="mnEquipamento" href="#">Equipamentos</a>
-					</li>
-				</div>
-				<div
-				style="cursor:pointer;"
-				onMouseOver="setMouseOver(this, 'mnOperacoes')"
-				onMouseOut="setMouseOut(this, 'mnOperacoes')"
-				onclick="addNewTab('tab_processos', 'Operações', 'List', 'processos', 'operacoes-icon')">
-					<li>
-						<a id="mnOperacoes" href="#">Operações</a>
-					</li>
-				</div>
-				<div
-				style="cursor:pointer;"
-				onMouseOver="setMouseOver(this, 'mnManufatura')"
-				onMouseOut="setMouseOut(this, 'mnManufatura')"
-				onclick="addNewTab('tab_produto_processos', 'Processos de Fabricação','List', 'produto_processos', 'manufaturas-icon')">
-					<li>
-						<a id="mnManufatura" href="#">Processos de Fabricação</a>
-					</li>
-				</div>
-			</ul>
-		</div>
 		<div id="pcp">
 			<ul>
+				<div
+				style="cursor:pointer;"
+				onMouseOver="setMouseOver(this, 'mnOrdems')"
+				onMouseOut="setMouseOut(this, 'mnOrdems')"
+				style="cursor:pointer;"
+				onclick="addNewTab('tab_ordems', 'O.S.','List', 'ordems', 'ordems-icon')">
+					<li>
+						<a id="mnOrdems" href="#">Ordens de Serviço</a>
+					</li>
+				</div>
 				<div
 				style="cursor:pointer;"
 				onMouseOver="setMouseOver(this, 'mnPedidos')"

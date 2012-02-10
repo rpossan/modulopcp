@@ -105,11 +105,6 @@ Ext.onReady(function(){
 	                  contentEl: 'cadastros',
 	                  border: false
 	                },
-	                {
-	                  title: 'Engenharia',
-	                  contentEl: 'engenharia',
-	                  border: false
-	                },
 					{
 	                  title:'PCP',
 	                  contentEl: 'pcp',

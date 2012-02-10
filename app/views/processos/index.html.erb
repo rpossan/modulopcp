@@ -65,8 +65,8 @@
 
 	var store_Processos = createStore(
 		'<%= url_for(:controller => "processos", :action => "store", :id => "grid") %>',
-		['id', 'nome', 'codigo', 'descricao', 'detalhes'],
-		[{name: 'id'},{name: 'nome'},{name: 'codigo'},{name: 'descricao'},{name: 'detalhes'}]
+		['id', 'nome', 'codigo', 'tipo', 'descricao', 'detalhes'],
+		[{name: 'id'},{name: 'nome'},{name: 'codigo'},{name: 'tipo'},{name: 'descricao'},{name: 'detalhes'}]
 	);
 
 	var pBar = createPBar(store_Processos, 'processos');
@@ -78,6 +78,7 @@
 		[
        		{header: 'Nome', dataIndex: 'nome', sortable: true, renderer: linkShow, width: 220},
       		{header: 'Codigo', dataIndex: 'codigo', sortable: true, width: 220},
+      		{header: 'Tipo', dataIndex: 'tipo', sortable: true, width: 220},
       		{header: 'Descricao', dataIndex: 'descricao', sortable: true, width: 220},
       		{id: 'edit', dataIndex: 'edit', renderer: btnShow, width: 40},
       		{id: 'delete', dataIndex: 'delete', renderer: btnDelete, width: 40}

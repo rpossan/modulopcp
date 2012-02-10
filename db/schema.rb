@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120209190928) do
+ActiveRecord::Schema.define(:version => 20120210163727) do
 
   create_table "clientes", :force => true do |t|
     t.string   "nome"
@@ -26,6 +26,16 @@ ActiveRecord::Schema.define(:version => 20120209190928) do
     t.string   "estado"
     t.string   "cidade"
     t.string   "pais"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "equipamentos", :force => true do |t|
+    t.string   "codigo"
+    t.string   "modelo"
+    t.string   "tipo"
+    t.string   "serie"
+    t.decimal  "horas_dia"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -48,12 +58,23 @@ ActiveRecord::Schema.define(:version => 20120209190928) do
     t.string   "foto"
   end
 
+  create_table "ordems", :force => true do |t|
+    t.string   "titulo"
+    t.integer  "cliente_id"
+    t.integer  "produto_id"
+    t.date     "data_prevista"
+    t.integer  "qtde"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "processos", :force => true do |t|
     t.string   "codigo"
     t.string   "nome"
     t.string   "descricao"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "tipo"
   end
 
   create_table "produto_processos", :force => true do |t|

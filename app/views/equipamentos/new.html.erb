@@ -1,0 +1,57 @@
+<script type="text/javascript">
+		var form_newEquipamentos = new Ext.FormPanel({
+			frame:true,
+			labelWidth: 120,
+			title: 'Crie novo equipamento conforme formulário abaixo',
+			bodyStyle:'padding:5px 5px 0',
+			style: "margin: 0px auto 0px auto;",
+			width: 520,
+			defaultType: 'textfield',
+			monitorValid: true,
+			items: [
+				{
+					xtype:"fieldset",
+					autoHeight: true,
+					defaults: {width: 350},
+					items: [
+						{ xtype:'textfield', fieldLabel: 'Codigo', name: 'equipamento[codigo]', allowBlank:false, maxLength: 50 },
+						{ xtype:'textfield', fieldLabel: 'Modelo', name: 'equipamento[modelo]', allowBlank:false, maxLength: 100 },
+						{ xtype:'textfield', fieldLabel: 'Tipo', name: 'equipamento[tipo]', allowBlank: true, maxLength: 30 },
+						{ xtype:'textfield', fieldLabel: 'Série', name: 'equipamento[serie]', allowBlank: false, maxLength: 30 },
+						{ xtype:'numberfield', fieldLabel: 'Disponibilidade (hrs)', name: 'equipamento[horas_dia]', allowBlank: true, maxLength: 12 }
+					]
+				}
+			],
+			buttons: [
+				{
+					text: 'Salvar',
+					handler:function(){
+						if(form_newEquipamentos.getForm().isValid()){
+							form_newEquipamentos.getForm().submit({
+								url:'<%= url_for (:controller => 'equipamentos', :action => 'create') %>',
+								waitMsg:'Saving Data...',
+								success: function(){
+									Ext.Msg.alert('OK','Equipamento cadastrado com sucesso!');
+									updateSubTab('tab_equipamentos','sub_tab_equipamentos','Equipamentos','<%= equipamentos_path %>');
+									closeSubTab('tab_equipamentos', 'sub_tab_equipamentos_new');
+									<%= params[:closealll] ?  "closeTab('tab_equipamentos');" : '' %>
+								},
+								failure: function(form, action){
+									if (action.failureType == 'server'){
+										msg = String(Ext.util.JSON.decode(action.response.responseText));
+										Ext.Msg.alert('Validation Error', msg);
+									} else {
+										Ext.Msg.alert('Error', 'There has been a problem while creating this request. Contact the system administrator.');
+									}
+								}
+							});
+						}
+					}
+				},
+				{text: 'Cancel', handler:function(){closeSubTab('tab_equipamentos','sub_tab_equipamentos_new');<%= params[:closealll] ?  "closeTab('tab_equipamentos');" : '' %>}}
+			]
+		});
+
+		form_newEquipamentos.render('area_form_newEquipamentos');
+</script>
+<br/><div id="area_form_newEquipamentos" style="float:left;margin-left:10px;"></div>
