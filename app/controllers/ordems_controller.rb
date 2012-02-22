@@ -2,7 +2,7 @@ class OrdemsController < ApplicationController
 
   def planejamento
     @ordems = Ordem.all(:order => "data_prevista ASC")
-    @equipamentos = Equipamento.all(:order => "nome ASC")
+    @equipamentos = Equipamento.all(:order => "codigo ASC")
   end
 
   def store
