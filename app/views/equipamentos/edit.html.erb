@@ -1,11 +1,39 @@
 <script type="text/javascript">
+	var store_combo_Operacoes_<%= @equipamento.id %> =
+	createStore('/processos/store/combo', ['id', 'nome'], [{name: 'id',  mapping: 'id'}, {name: 'nome',  mapping: 'nome'}]);
+
+	var comboOperacoes_<%= @equipamento.id %> =
+	new Ext.form.ComboBox({
+		fieldLabel: 'Operação Principal',
+		valueField: 'id',
+		displayField: 'nome',
+		name: 'equipamento[operacao_id]',
+		hiddenName: 'equipamento[operacao_id]',
+		editable: true,
+		emptyText: 'Selecione a operação...',
+		store: store_combo_Operacoes_<%= @equipamento.id %>,
+		mode: 'remote',
+		selectOnFocus: true,
+		forceSelection: true,
+		triggerAction: 'all',
+		minChars: 3,
+		allowBlank: false,
+		width: 400,
+		listeners: { beforequery: function(qe){ delete qe.combo.lastQuery; } }
+	});
+
+	store_combo_Operacoes_<%= @equipamento.id %>.on('load', function(){
+		comboOperacoes_<%= @equipamento.id %>.setValue(<%= @equipamento.operacao_id %>)
+	}, this, {single:true});
+
     var form_newEquipamentos_<%= @equipamento.id %> = new Ext.FormPanel
 	    ({
 	      frame:true,
+  		  labelWidth: 120,
 	      title: 'Editando equipamento <%= @equipamento.modelo %>',
 	      bodyStyle:'padding:5px 5px 0',
 	      style: "margin: 0px auto 0px auto;",
-	      width: 520,
+	      width: 540,
 	      defaultType: 'textfield',
 	      monitorValid: true,
 	      items: [{xtype:"fieldset",
@@ -16,6 +44,7 @@
 						{ value: '<%= @equipamento.modelo %>', xtype:'textfield', fieldLabel: 'Modelo', name: 'equipamento[modelo]', allowBlank:false, maxLength: 100 },
 						{ value: '<%= @equipamento.tipo %>', xtype:'textfield', fieldLabel: 'Tipo', name: 'equipamento[tipo]', allowBlank: true, maxLength: 30 },
 						{ value: '<%= @equipamento.serie %>', xtype:'textfield', fieldLabel: 'Série', name: 'equipamento[serie]', allowBlank: false, maxLength: 30 },
+						comboOperacoes_<%= @equipamento.id %>,
 						{ value: '<%= @equipamento.horas_dia %>', xtype:'numberfield', fieldLabel: 'Disponibilidade (hrs)', name: 'equipamento[horas_dia]', allowBlank: true, maxLength: 12 }
 					]
                  }
@@ -49,6 +78,7 @@
 	               }
 			]
 	    });
+    store_combo_Operacoes_<%= @equipamento.id %>.load();
     form_newEquipamentos_<%= @equipamento.id %>.render( 'area_form_editEquipamentos_<%= @equipamento.id %>');
 </script>
 <br/>

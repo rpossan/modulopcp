@@ -1,11 +1,34 @@
 <script type="text/javascript">
+		var store_combo_Operacoes =
+		createStore('/processos/store/combo', ['id', 'nome'], [{name: 'id',  mapping: 'id'}, {name: 'nome',  mapping: 'nome'}]);
+
+		var comboOperacoes =
+		new Ext.form.ComboBox({
+			fieldLabel: 'Operação Principal',
+			valueField: 'id',
+			displayField: 'nome',
+			name: 'equipamento[operacao_id]',
+			hiddenName: 'equipamento[operacao_id]',
+			editable: true,
+			emptyText: 'Selecione a operação...',
+			store: store_combo_Operacoes,
+			mode: 'remote',
+			selectOnFocus: true,
+			forceSelection: true,
+			triggerAction: 'all',
+			minChars: 3,
+			allowBlank: false,
+			width: 400,
+			listeners: { beforequery: function(qe){ delete qe.combo.lastQuery; } }
+		});
+
 		var form_newEquipamentos = new Ext.FormPanel({
 			frame:true,
 			labelWidth: 120,
 			title: 'Crie novo equipamento conforme formulário abaixo',
 			bodyStyle:'padding:5px 5px 0',
 			style: "margin: 0px auto 0px auto;",
-			width: 520,
+			width: 540,
 			defaultType: 'textfield',
 			monitorValid: true,
 			items: [
@@ -18,6 +41,7 @@
 						{ xtype:'textfield', fieldLabel: 'Modelo', name: 'equipamento[modelo]', allowBlank:false, maxLength: 100 },
 						{ xtype:'textfield', fieldLabel: 'Tipo', name: 'equipamento[tipo]', allowBlank: true, maxLength: 30 },
 						{ xtype:'textfield', fieldLabel: 'Série', name: 'equipamento[serie]', allowBlank: false, maxLength: 30 },
+						comboOperacoes,
 						{ xtype:'numberfield', fieldLabel: 'Disponibilidade (hrs)', name: 'equipamento[horas_dia]', allowBlank: true, maxLength: 12 }
 					]
 				}

@@ -1,5 +1,10 @@
 class OrdemsController < ApplicationController
 
+  def planejamento
+    @ordems = Ordem.all(:order => "data_prevista ASC")
+    @equipamentos = Equipamento.all
+  end
+
   def store
     list = []
     conditions = ""
