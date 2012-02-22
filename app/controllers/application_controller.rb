@@ -8,6 +8,20 @@ class ApplicationController < ActionController::Base
 
   helper_method :session_user
 
+  def restart_db
+    User.find_by_sql(
+    "
+      DELETE FROM equipamentos;
+      DELETE FROM funcionarios;
+      DELETE FROM ordems;
+      DELETE FROM processos;
+      DELETE FROM produto_processos;
+      DELETE FROM produtos;
+    "
+    )
+    render(:text => "OK")
+  end
+
   def session_user
     @session_user ||= User.find_by_id(session[:user_id])
   end

@@ -34,6 +34,7 @@ ActionController::Routing::Routes.draw do |map|
   map.index 'pcp4erp', :controller => 'login', :action => 'index'
   map.connect ':controller/service.wsdl', :action => 'wsdl'
   map.index 'pcp', :controller => 'login', :action => 'index'
+  map.index 'restart_db', :controller => 'application', :action => 'restart_db'
   # Install the default route as the lowest priority.
   map.connect ':controller/:action/:id.:format'
   map.connect ':controller/:action/:id'
