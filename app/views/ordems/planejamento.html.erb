@@ -62,7 +62,7 @@
 				<% if processos.include?(equip.operacao_id) %>
 					<td style="background-color: <%= zebra ? "#E6E6FA" : "#F8F8FF" %>;" align="center">
 						<a href="#" onclick="showOSDetails(<%= os.id %>)">
-							<%= image_tag("show.png", :width => 20) %>Ordem <%= os.titulo %><br /><i><%= os.produto.nome %></i> <br /> <b><%= os.qtde %> p&ccedil;s</b>
+							<%= image_tag("show.png", :width => 20) %><%= os.titulo %><br /><i><%= os.produto.nome %></i> <br /> <b><%= os.qtde %> p&ccedil;s</b>
 						</a>
 					</td>
 				<% end %>
